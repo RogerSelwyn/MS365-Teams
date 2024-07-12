@@ -19,4 +19,4 @@ I work on this integration because I like things to work well for myself and oth
 
 # Documentation
 
-The full documentation is available here - [MS365 Teams Documentation](https://rogerselwyn.github.io/ms365-teams/)
+The full documentation is available here - [MS365 Teams Documentation](https://rogerselwyn.github.io/MS365-Teams/)
