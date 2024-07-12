@@ -5,8 +5,10 @@
         "update_user_preferred_status": "mdi:microsoft-teams"
     },
     "entity": {
-        "teams": {
-            "default": "mdi:microsoft-teams"
+        "sensor": {
+            "teams": {
+                "default": "mdi:microsoft-teams"
+            }
         }
     }
 }
