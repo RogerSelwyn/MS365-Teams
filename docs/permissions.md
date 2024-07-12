@@ -21,6 +21,6 @@ Under "API Permissions" click Add a permission, then Microsoft Graph, then Deleg
 ## Changing Features and Permissions
 If you decide to enable new features in the integration, or decide to change from read only to read/write, you will very likely get a warning message similar to the following in your logs.
 
-`Minimum required permissions not granted: ['Tasks.Read', ['Tasks.ReadWrite']]`
+`Minimum required permissions not granted: ['Chat.Read', ['Chat.ReadWrite']]`
 
 You will need to delete as detailed on the [token page](./token.md)
