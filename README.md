@@ -1,11 +1,11 @@
-[![Validate with hassfest](https://github.com/RogerSelwyn/ms365-todo/actions/workflows/hassfest.yaml/badge.svg)](https://github.com/RogerSelwyn/ms365-todo/actions/workflows/hassfest.yaml) [![HACS Validate](https://github.com/RogerSelwyn/ms365-todo/actions/workflows/hacs.yaml/badge.svg)](https://github.com/RogerSelwyn/ms365-todo/actions/workflows/hacs.yaml) [![CodeFactor](https://www.codefactor.io/repository/github/rogerselwyn/ms365-todo/badge)](https://www.codefactor.io/repository/github/rogerselwyn/ms365-todo) [![Downloads for latest release](https://img.shields.io/github/downloads/RogerSelwyn/ms365-todo/latest/total.svg)](https://github.com/RogerSelwyn/ms365-todo/releases/latest)
+[![Validate with hassfest](https://github.com/RogerSelwyn/ms365-teams/actions/workflows/hassfest.yaml/badge.svg)](https://github.com/RogerSelwyn/ms365-teams/actions/workflows/hassfest.yaml) [![HACS Validate](https://github.com/RogerSelwyn/ms365-teams/actions/workflows/hacs.yaml/badge.svg)](https://github.com/RogerSelwyn/ms365-teams/actions/workflows/hacs.yaml) [![CodeFactor](https://www.codefactor.io/repository/github/rogerselwyn/ms365-teams/badge)](https://www.codefactor.io/repository/github/rogerselwyn/ms365-teams) [![Downloads for latest release](https://img.shields.io/github/downloads/RogerSelwyn/ms365-teams/latest/total.svg)](https://github.com/RogerSelwyn/ms365-teams/releases/latest)
 
-![GitHub release](https://img.shields.io/github/v/release/RogerSelwyn/ms365-todo) [![maintained](https://img.shields.io/maintenance/yes/2024.svg)](#) [![maintainer](https://img.shields.io/badge/maintainer-%20%40RogerSelwyn-blue.svg)](https://github.com/RogerSelwyn) [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration) [![Community Forum](https://img.shields.io/badge/community-forum-brightgreen.svg)](https://community.home-assistant.io/t/office-365-calendar-access)
+![GitHub release](https://img.shields.io/github/v/release/RogerSelwyn/ms365-teams) [![maintained](https://img.shields.io/maintenance/yes/2024.svg)](#) [![maintainer](https://img.shields.io/badge/maintainer-%20%40RogerSelwyn-blue.svg)](https://github.com/RogerSelwyn) [![hacs_badge](https://img.shields.io/badge/HACS-Default-41BDF5.svg)](https://github.com/hacs/integration) [![Community Forum](https://img.shields.io/badge/community-forum-brightgreen.svg)](https://community.home-assistant.io/t/office-365-calendar-access)
 
-# Microsoft 365 To Do Integration for Home Assistant
+# Microsoft 365 Teams Integration for Home Assistant
 
 This integration enables:
-1. Getting, creating and updating MS To Do Lists
+1. Getting, creating and updating MS Teams Lists
 
 This project would not be possible without the wonderful [python-o365 project](https://github.com/O365/python-o365).
 
@@ -19,4 +19,4 @@ I work on this integration because I like things to work well for myself and oth
 
 # Documentation
 
-The full documentation is available here - [MS365 To Do Documentation](https://rogerselwyn.github.io/ms365-todo/)
+The full documentation is available here - [MS365 Teams Documentation](https://rogerselwyn.github.io/ms365-teams/)
