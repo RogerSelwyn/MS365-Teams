@@ -1,0 +1,108 @@
+send_chat_message:
+  target:
+    device:
+      integration: ms365_teams
+    entity:
+      integration: ms365_teams
+      domain: sensor
+  fields:
+    chat_id:
+      example: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
+      required: true
+      selector:
+        text:
+    message:
+      example: Hello team
+      required: true
+      selector:
+        text:
+    content_type:
+      example: text
+      required: false
+      selector:
+        select:
+          mode: dropdown
+          options:
+            - label: HTML
+              value: html
+            - label: Text
+              value: text
+
+update_user_status:
+  target:
+    device:
+      integration: ms365_teams
+    entity:
+      integration: ms365_teams
+      domain: sensor
+  fields:
+    availability:
+      example: Busy
+      required: true
+      selector:
+        select:
+          mode: dropdown
+          options:
+            - label: "Available"
+              value: "Available"
+            - label: "Busy"
+              value: "Busy"
+            - label: "Away"
+              value: "Away"
+            - label: "Do Not Disturb"
+              value: "DoNotDisturb"
+    activity:
+      example: InACall
+      required: true
+      selector:
+        select:
+          mode: dropdown
+          options:
+            - label: "Available"
+              value: "Available"
+            - label: "In a Call"
+              value: "InACall"
+            - label: "In a Conference Call"
+              value: "InAConferenceCall"
+            - label: "Away"
+              value: "Away"
+            - label: "Presenting"
+              value: "Presenting"
+    expiration_duration:
+      example: PT1H
+      required: false
+      selector:
+        text:
+
+update_user_preferred_status:
+  target:
+    device:
+      integration: ms365_teams
+    entity:
+      integration: ms365_teams
+      domain: sensor
+  fields:
+    availability:
+      example: Busy
+      required: true
+      selector:
+        select:
+          mode: dropdown
+          options:
+            - label: "Available"
+              value: "Available"
+            - label: "Busy"
+              value: "Busy"
+            - label: "Do Not Disturb"
+              value: "DoNotDisturb"
+            - label: "Be Right Back"
+              value: "BeRightBack"
+            - label: "Away"
+              value: "Away"
+            - label: "Offline"
+              value: "Offline"
+    expiration_duration:
+      example: PT1H
+      required: false
+      selector:
+        text:

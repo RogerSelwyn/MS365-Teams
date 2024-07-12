@@ -1,0 +1,12 @@
+{
+    "services": {
+        "send_chat_message": "mdi:microsoft-teams",
+        "update_user_status": "mdi:microsoft-teams",
+        "update_user_preferred_status": "mdi:microsoft-teams"
+    },
+    "entity": {
+        "teams": {
+            "default": "mdi:microsoft-teams"
+        }
+    }
+}
