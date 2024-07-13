@@ -7,7 +7,6 @@ from datetime import timedelta
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_NAME, CONF_UNIQUE_ID
 from homeassistant.core import HomeAssistant
-from homeassistant.helpers.entity import async_generate_entity_id
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
 
 from ..const import (
@@ -17,6 +16,7 @@ from ..const import (
     CONF_ENTITY_NAME,
     CONF_ENTITY_TYPE,
 )
+from ..helpers.utils import build_entity_id
 from .const_integration import (
     ATTR_CHAT_ID,
     ATTR_CHAT_TYPE,
@@ -73,7 +73,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         if self._entry.data[CONF_STATUS_ENABLE] != EnableOptions.DISABLED:
             name = f"{self._entry.data[CONF_ENTITY_NAME]}_status"
             new_key = {
-                CONF_ENTITY_KEY: _build_entity_id(
+                CONF_ENTITY_KEY: build_entity_id(
                     self.hass, ENTITY_ID_FORMAT_SENSOR, name
                 ),
                 CONF_UNIQUE_ID: f"{name}_ms365",
@@ -97,7 +97,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         if self._entry.data[CONF_CHAT_ENABLE] != EnableOptions.DISABLED:
             name = f"{self._entry.data[CONF_ENTITY_NAME]}_chat"
             new_key = {
-                CONF_ENTITY_KEY: _build_entity_id(
+                CONF_ENTITY_KEY: build_entity_id(
                     self.hass, ENTITY_ID_FORMAT_SENSOR, name
                 ),
                 CONF_UNIQUE_ID: f"{name}_ms365",
@@ -206,12 +206,3 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
                 memberlist.append("Name Unknown")
         self._chat_members[chat.object_id] = memberlist
         return memberlist
-
-
-def _build_entity_id(hass, entity_id_format, name):
-    """Build and entity ID."""
-    return async_generate_entity_id(
-        entity_id_format,
-        name,
-        hass=hass,
-    )
