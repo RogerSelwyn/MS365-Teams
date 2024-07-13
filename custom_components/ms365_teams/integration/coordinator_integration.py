@@ -159,13 +159,13 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
                 if state:
                     break
                 continue
-
-            memberlist = await self._async_get_memberlist(chat)
-            chatitems = {
-                ATTR_CHAT_ID: chat.object_id,
-                ATTR_CHAT_TYPE: chat.chat_type,
-                ATTR_MEMBERS: ",".join(memberlist),
-            }
+            else:
+                memberlist = await self._async_get_memberlist(chat)
+                chatitems = {
+                    ATTR_CHAT_ID: chat.object_id,
+                    ATTR_CHAT_TYPE: chat.chat_type,
+                    ATTR_MEMBERS: ",".join(memberlist),
+                }
             if chat.chat_type == "group":
                 chatitems[ATTR_TOPIC] = chat.topic
 
