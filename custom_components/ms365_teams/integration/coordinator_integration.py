@@ -56,16 +56,16 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         self._entry = entry
         self._account = account
         self._entity_name = entry.data[CONF_ENTITY_NAME]
-        self._keys = []
+        self.keys = []
         self._data = {}
         self._chat_members = {}
 
-    async def async_setup_entries(self):
+    async def _async_setup(self):
         """Do the initial setup of the entities."""
         status_keys = await self._async_status_sensors()
         chat_keys = self._chat_sensors()
-        self._keys = chat_keys + status_keys
-        return self._keys
+        self.keys = chat_keys + status_keys
+        return self.keys
 
     async def _async_status_sensors(self):
         keys = []
@@ -110,10 +110,10 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
 
     async def _async_update_data(self):
         _LOGGER.debug(
-            "Doing %s email update(s) for: %s", len(self._keys), self._entity_name
+            "Doing %s email update(s) for: %s", len(self.keys), self._entity_name
         )
 
-        for key in self._keys:
+        for key in self.keys:
             entity_type = key[CONF_ENTITY_TYPE]
             if entity_type == SENSOR_TEAMS_CHAT:
                 await self._async_teams_chat_update(key)

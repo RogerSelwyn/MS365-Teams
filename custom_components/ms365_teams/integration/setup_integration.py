@@ -16,8 +16,6 @@ async def async_do_setup(hass: HomeAssistant, entry: ConfigEntry, account):
 
     _LOGGER.debug("Sensor setup - start")
     sensor_coordinator = MS365SensorCoordinator(hass, entry, account)
-    sensor_keys = await sensor_coordinator.async_setup_entries()
-    if sensor_keys:
-        await sensor_coordinator.async_config_entry_first_refresh()
-    _LOGGER.debug("Email setup - finish")
-    return sensor_coordinator, sensor_keys, PLATFORMS
+    await sensor_coordinator.async_config_entry_first_refresh()
+    _LOGGER.debug("Sensor setup - finish")
+    return sensor_coordinator, sensor_coordinator.keys, PLATFORMS
