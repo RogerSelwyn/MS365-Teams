@@ -1,8 +1,8 @@
 {
-    "name": "Microsoft 365 - To Do",
+    "name": "Microsoft 365 - Teams",
     "zip_release": true,
-    "filename": "ms365_todo.zip",
-    "homeassistant": "2024.6.0",
+    "filename": "ms365_teams.zip",
+    "homeassistant": "2024.8.0",
     "content_in_root": false,
     "render_readme": true
 } 
