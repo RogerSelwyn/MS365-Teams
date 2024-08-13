@@ -1,5 +1,17 @@
 # Changelog
 
+## v0.1.1 (2024/08/13)
+### 🐛 Fixes
+- [Handle corrupted token file gracefully with repair](https://github.com/RogerSelwyn/MS365-Teams/commit/8fae14039f52df6b4bce80a8f032b293e7a7ac1d) - @RogerSelwyn
+- [Extraneous letter](https://github.com/RogerSelwyn/MS365-Teams/commit/c47ac0b0c5eefc52cbbd737edec25f88d7e8fe49) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Move coordinator setup code to new _async_setup method](https://github.com/RogerSelwyn/MS365-Teams/commit/4cfb3d534ee3220b4f3601d9031d9d9486bebcbf) - @RogerSelwyn
+- [Minimum HA version 2024.8.0](https://github.com/RogerSelwyn/MS365-Teams/commit/0b2473ad09e96f33f8833c3bac70956a3a752475) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v0.1.1](https://github.com/RogerSelwyn/MS365-Teams/commit/62d8700244d7511e878f09c2b442785ff84ea8fc) - @RogerSelwyn
+  
 ## v0.1.0 (2024/07/18)
 ### ✨ Enhancements
 - [Add diagnostics support](https://github.com/RogerSelwyn/MS365-Teams/commit/02977a4c33201e78ffa2e8ee5aaf5af125c62186) - @RogerSelwyn
