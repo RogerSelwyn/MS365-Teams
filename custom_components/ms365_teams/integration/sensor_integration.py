@@ -114,7 +114,7 @@ async def _async_setup_register_services(entry):
 
 
 async def _async_setup_status_services(entry, perms):
-    if not entry.data[CONF_STATUS_ENABLE] == EnableOptions.UPDATE:
+    if entry.data[CONF_STATUS_ENABLE] != EnableOptions.UPDATE:
         return
 
     platform = entity_platform.async_get_current_platform()
@@ -132,7 +132,7 @@ async def _async_setup_status_services(entry, perms):
 
 
 async def _async_setup_chat_services(entry, perms):
-    if not entry.data[CONF_CHAT_ENABLE] == EnableOptions.UPDATE:
+    if entry.data[CONF_CHAT_ENABLE] != EnableOptions.UPDATE:
         return
 
     platform = entity_platform.async_get_current_platform()

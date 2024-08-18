@@ -155,17 +155,17 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
                 )
                 state, extra_attributes = self._process_chat_messages(messages)
 
-            if not self._entry.data[CONF_CHAT_ENABLE] == EnableOptions.UPDATE:
-                if state:
-                    break
-                continue
-            else:
+            if self._entry.data[CONF_CHAT_ENABLE] == EnableOptions.UPDATE:
                 memberlist = await self._async_get_memberlist(chat)
                 chatitems = {
                     ATTR_CHAT_ID: chat.object_id,
                     ATTR_CHAT_TYPE: chat.chat_type,
                     ATTR_MEMBERS: ",".join(memberlist),
                 }
+            elif state:
+                break
+            else:
+                continue
             if chat.chat_type == "group":
                 chatitems[ATTR_TOPIC] = chat.topic
 
