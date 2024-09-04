@@ -1,5 +1,20 @@
 # Changelog
 
+## v0.1.2 (2024/09/04)
+### 🐛 Fixes
+- [Fix issue of o365 library accessing token within the event loop](https://github.com/RogerSelwyn/MS365-Teams/commit/a353dba34f89fb4ea377cd376fc401e1f4924f45) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Create sourcery.yaml](https://github.com/RogerSelwyn/MS365-Teams/commit/1f6df3b074a865bdac326dd7a19ff4b0ab3568b2) - @RogerSelwyn
+- [Implement Sourcery.ai recomendations](https://github.com/RogerSelwyn/MS365-Teams/commit/604d28f8d3820188bba5fe727d59673a482645e8) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v0.1.2](https://github.com/RogerSelwyn/MS365-Teams/commit/6de927f17f7e9533b86d8fbdd693a39c8735d9e6) - @RogerSelwyn
+
+### Other
+- [build(deps): bump actions/checkout from 3 to 4](https://github.com/RogerSelwyn/MS365-Teams/commit/73281d88dc20d5f2d98a6ef5555401de59f5ac03) - @dependabot[bot]
+- [build(deps): bump actions/setup-python from 4 to 5](https://github.com/RogerSelwyn/MS365-Teams/commit/c1cc18e9a798cadefdf0029c6cf504c5192b3037) - @dependabot[bot]
+
 ## v0.1.1 (2024/08/13)
 ### 🐛 Fixes
 - [Handle corrupted token file gracefully with repair](https://github.com/RogerSelwyn/MS365-Teams/commit/8fae14039f52df6b4bce80a8f032b293e7a7ac1d) - @RogerSelwyn
