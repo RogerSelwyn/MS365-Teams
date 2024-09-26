@@ -60,7 +60,7 @@
     },
     "services": {
         "send_chat_message": {
-            "name": " Send chat message",
+            "name": "Send chat message",
             "description": "Send message to a specified chat",
             "fields": {
                 "chat_id": {
