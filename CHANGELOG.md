@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.1.3 (2024/10/07)
+### 🐛 Fixes
+- [Update en.json](https://github.com/RogerSelwyn/MS365-Teams/commit/4109054118bb240170f770f189a16aa955a7ebb3) - @RogerSelwyn
+- [Ensure all calls to O365 library methods are async](https://github.com/RogerSelwyn/MS365-Teams/commit/6e005cda50a848909a9de5abace465e5b2ce92eb) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v0.1.3](https://github.com/RogerSelwyn/MS365-Teams/commit/f8da48055346122c499bd5f797aa603cb0132800) - @RogerSelwyn
+
 ## v0.1.2 (2024/09/04)
 ### 🐛 Fixes
 - [Fix issue of o365 library accessing token within the event loop](https://github.com/RogerSelwyn/MS365-Teams/commit/a353dba34f89fb4ea377cd376fc401e1f4924f45) - @RogerSelwyn
