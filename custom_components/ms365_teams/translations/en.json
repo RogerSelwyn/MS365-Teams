@@ -5,6 +5,7 @@
         },
         "error": {
             "already_configured": "This account name has already been used. Use re-configure.",
+            "error_authenticating": "Error authenticating, JSONDecodeError, check log for errors",
             "status_enable_should_be_read": "To monitor status for alternate email, Status sensor must be set to Read.",
             "invalid_url": "Error, the originating url does not seem to be a valid microsoft redirect",
             "permissions": "Minimum permissions not granted for account: {entity_name}",
