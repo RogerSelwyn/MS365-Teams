@@ -63,9 +63,6 @@ async def async_integration_setup_entry(
 ) -> None:
     """Set up the MS365 platform."""
 
-    if not entry.runtime_data.is_authenticated:
-        return False
-
     chat_entities = _chat_entities(entry)
     status_entities = _status_entities(entry)
     entities = chat_entities + status_entities
