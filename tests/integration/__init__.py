@@ -1,6 +1,6 @@
 # pylint: disable=unused-import
 
-"""Tests for MS365 Teams."""
+"""Tests for MS365."""
 
 from custom_components.ms365_teams.classes import permissions  # noqa: F401
 from custom_components.ms365_teams.diagnostics import (

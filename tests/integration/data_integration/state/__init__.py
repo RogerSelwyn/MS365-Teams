@@ -1,5 +1,5 @@
 # pylint: disable=line-too-long
-"""Tests for MS365 Mail."""
+"""Tests for MS365."""
 
 UPDATE_CHATS = data = [
     {
