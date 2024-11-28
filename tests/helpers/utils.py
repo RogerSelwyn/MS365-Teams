@@ -42,11 +42,9 @@ def _build_token(scope):
 
 def build_token_url(result, token_url):
     """Build the correct token url"""
-    state = re.search(
-        "state=(.*?)&", result["description_placeholders"]["auth_url"]
-    ).group(1)
+    state = re.search("state=(.*?)&", result["description_placeholders"]["auth_url"])[1]
 
-    return token_url + "?" + TOKEN_PARAMS.format(state)
+    return f"{token_url}?{TOKEN_PARAMS.format(state)}"
 
 
 def build_token_file(tmp_path, scope):

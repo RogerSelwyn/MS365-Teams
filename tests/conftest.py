@@ -111,9 +111,8 @@ async def setup_base_integration(
 ) -> None:
     """Fixture for setting up the component."""
     method_name = "standard_mocks"
-    if hasattr(request, "param"):
-        if "method_name" in request.param:
-            method_name = request.param["method_name"]
+    if hasattr(request, "param") and "method_name" in request.param:
+        method_name = request.param["method_name"]
 
     mock_method = getattr(MS365MOCKS, method_name)
     mock_method(requests_mock)
