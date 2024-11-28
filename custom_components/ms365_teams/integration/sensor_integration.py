@@ -187,8 +187,7 @@ class MS365TeamsStatusSensor(MS365TeamsSensor, SensorEntity):
                 },
             )
 
-        if not self._validate_status_permissions():
-            return False
+        self._validate_status_permissions()
 
         status = await self.hass.async_add_executor_job(
             self.teams.set_my_presence,
@@ -216,8 +215,7 @@ class MS365TeamsStatusSensor(MS365TeamsSensor, SensorEntity):
                 },
             )
 
-        if not self._validate_status_permissions():
-            return False
+        self._validate_status_permissions()
 
         activity = (
             availability
@@ -278,8 +276,7 @@ class MS365TeamsChatSensor(MS365TeamsSensor, SensorEntity):
 
     async def async_send_chat_message(self, chat_id, message, content_type):
         """Send a message to the specified chat."""
-        if not self._validate_chat_permissions():
-            return False
+        self._validate_chat_permissions()
 
         chats = await self.hass.async_add_executor_job(self.teams.get_my_chats)
         for chat in chats:
