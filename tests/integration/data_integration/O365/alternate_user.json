@@ -1,0 +1,15 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users/$entity",
+    "@microsoft.graph.tips": "This request only returns a subset of the resource's properties. Your app will need to use $select to return non-default properties. To find out what other properties are available for this resource see https://learn.microsoft.com/graph/api/resources/user",
+    "businessPhones": [],
+    "displayName": "Jane Doe",
+    "givenName": "Jane",
+    "jobTitle": null,
+    "mail": "jane@notmail.com",
+    "mobilePhone": "07999 123457",
+    "officeLocation": null,
+    "preferredLanguage": "en-US",
+    "surname": "Doe",
+    "userPrincipalName": "jane@nomail.com",
+    "id": "fake_user_id2"
+}

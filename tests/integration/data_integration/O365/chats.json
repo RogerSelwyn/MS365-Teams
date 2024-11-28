@@ -1,0 +1,49 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#chats",
+    "@odata.count": 5,
+    "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET me/chats?$select=chatType,createdDateTime",
+    "value": [
+        {
+            "id": "chat1",
+            "topic": null,
+            "createdDateTime": "2022-05-19T14:05:29.376Z",
+            "lastUpdatedDateTime": "2022-05-19T14:05:29.376Z",
+            "chatType": "oneOnOne",
+            "webUrl": "https://teams.microsoft.com/l/chat/chat1/0?tenantId=tenantid",
+            "tenantId": "tenantid",
+            "onlineMeetingInfo": null,
+            "viewpoint": {
+                "isHidden": false,
+                "lastMessageReadDateTime": "2024-09-28T15:21:09.374Z"
+            }
+        },
+        {
+            "id": "chat2",
+            "topic": null,
+            "createdDateTime": "2023-05-28T14:18:22.615Z",
+            "lastUpdatedDateTime": "2023-05-28T14:18:22.615Z",
+            "chatType": "group",
+            "webUrl": "https://teams.microsoft.com/l/chat/chat2/0?tenantId=tenantid",
+            "tenantId": "tenantid",
+            "onlineMeetingInfo": null,
+            "viewpoint": {
+                "isHidden": false,
+                "lastMessageReadDateTime": "2023-05-28T15:54:37.617Z"
+            }
+        },
+        {
+            "id": "chat3",
+            "topic": "Unknown topic",
+            "createdDateTime": "0001-01-01T00:00:00Z",
+            "lastUpdatedDateTime": "0001-01-01T00:00:00Z",
+            "chatType": "unknownFutureValue",
+            "webUrl": null,
+            "tenantId": null,
+            "onlineMeetingInfo": null,
+            "viewpoint": {
+                "isHidden": false,
+                "lastMessageReadDateTime": "0001-01-01T00:00:00Z"
+            }
+        }
+    ]
+}

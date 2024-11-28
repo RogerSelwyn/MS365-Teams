@@ -1,0 +1,81 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('fake_user_id')/chats('chat2')/messages",
+    "@odata.count": 14,
+    "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET me/chats('<key>')/messages?$select=attachments,body",
+    "value": [
+        {
+            "id": "chatmessage3",
+            "replyToId": null,
+            "etag": "chatmessag3",
+            "messageType": "message",
+            "createdDateTime": "2020-01-02T00:00:00.000Z",
+            "lastModifiedDateTime": "2020-01-02T00:00:00.000Z",
+            "lastEditedDateTime": null,
+            "deletedDateTime": null,
+            "subject": null,
+            "summary": null,
+            "chatId": "chat2",
+            "importance": "normal",
+            "locale": "en-us",
+            "webUrl": null,
+            "channelIdentity": null,
+            "policyViolation": null,
+            "eventDetail": null,
+            "from": {
+                "application": null,
+                "device": null,
+                "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                    "id": "fake_user_id",
+                    "displayName": "John Doe",
+                    "userIdentityType": "aadUser",
+                    "tenantId": "tenantid"
+                }
+            },
+            "body": {
+                "contentType": "text",
+                "content": "Test message 3"
+            },
+            "attachments": [],
+            "mentions": [],
+            "reactions": []
+        },
+        {
+            "id": "chatmessage4",
+            "replyToId": null,
+            "etag": "chatmessage4",
+            "messageType": "message",
+            "createdDateTime": "2020-01-01T00:00:00.000Z",
+            "lastModifiedDateTime": "2020-01-01T00:00:00.000Z",
+            "lastEditedDateTime": null,
+            "deletedDateTime": null,
+            "subject": null,
+            "summary": null,
+            "chatId": "chat2",
+            "importance": "normal",
+            "locale": "en-us",
+            "webUrl": null,
+            "channelIdentity": null,
+            "policyViolation": null,
+            "eventDetail": null,
+            "from": {
+                "application": null,
+                "device": null,
+                "user": {
+                    "@odata.type": "#microsoft.graph.teamworkUserIdentity",
+                    "id": "fake_user_id",
+                    "displayName": "John Doe",
+                    "userIdentityType": "aadUser",
+                    "tenantId": "tenantid"
+                }
+            },
+            "body": {
+                "contentType": "text",
+                "content": "Test message 4"
+            },
+            "attachments": [],
+            "mentions": [],
+            "reactions": []
+        }
+    ]
+}

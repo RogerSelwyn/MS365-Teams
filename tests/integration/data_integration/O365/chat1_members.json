@@ -1,0 +1,31 @@
+{
+    "@odata.context": "https://graph.microsoft.com/v1.0/$metadata#users('fake_user_id')/chats('chat1')/members",
+    "@odata.count": 2,
+    "@microsoft.graph.tips": "Use $select to choose only the properties your app needs, as this can lead to performance improvements. For example: GET me/chats('<key>')/members?$select=displayName,roles",
+    "value": [
+        {
+            "@odata.type": "#microsoft.graph.aadUserConversationMember",
+            "id": "conversationmemberid1",
+            "roles": [
+                "owner"
+            ],
+            "displayName": "John Doe",
+            "visibleHistoryStartDateTime": "0001-01-01T00:00:00Z",
+            "userId": "fake_user_id",
+            "email": "john@nomail.com",
+            "tenantId": "tenantid"
+        },
+        {
+            "@odata.type": "#microsoft.graph.aadUserConversationMember",
+            "id": "conversationmemberid2",
+            "roles": [
+                "owner"
+            ],
+            "displayName": "Jane Doe",
+            "visibleHistoryStartDateTime": "0001-01-01T00:00:00Z",
+            "userId": "fake-user-id2",
+            "email": "jane@nomail.com",
+            "tenantId": "tenantid"
+        }
+    ]
+}
