@@ -39,7 +39,7 @@ class Permissions(BasePermissions):
     def _build_status_permissions(self):
         if self._status_enable == EnableOptions.UPDATE:
             self._requested_permissions.append(PERM_PRESENCE_READWRITE)
-        else:
+        elif self._status_enable == EnableOptions.READ or self._alternate_email:
             self._requested_permissions.append(PERM_PRESENCE_READ)
         if self._alternate_email:
             self._requested_permissions.append(PERM_PRESENCE_READ_ALL)
@@ -47,5 +47,5 @@ class Permissions(BasePermissions):
     def _build_chat_permissions(self):
         if self._chat_enable == EnableOptions.UPDATE:
             self._requested_permissions.append(PERM_CHAT_READWRITE)
-        else:
+        elif self._chat_enable == EnableOptions.READ:
             self._requested_permissions.append(PERM_CHAT_READ)
