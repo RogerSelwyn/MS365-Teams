@@ -56,7 +56,7 @@
     },
     "exceptions": {
         "not_authorised": {
-            "message": "Not authorisied requires permission: {required_permission}"
+            "message": "{required_permission}"
         },
         "not_possible": {
             "message": "Not possible to update alternate user status: {email}"
