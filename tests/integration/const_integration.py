@@ -33,6 +33,11 @@ ALT_CONFIG_ENTRY["alt_auth_method"] = True
 RECONFIGURE_CONFIG_ENTRY = deepcopy(BASE_CONFIG_ENTRY)
 del RECONFIGURE_CONFIG_ENTRY["entity_name"]
 
+MIGRATION_CONFIG_ENTRY = {
+    "data": BASE_CONFIG_ENTRY,
+    "options": {},
+}
+
 DIAGNOSTIC_GRANTED_PERMISSIONS = [
     "Chat.Read",
     "Presence.Read",
