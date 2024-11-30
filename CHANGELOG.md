@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.1 (2024/11/30)
+### 🧰 Maintenance
+- [Add support for migration from o365 integration](https://github.com/RogerSelwyn/MS365-Teams/commit/f01add8067b62fefd889733c5ba1d484691ebc0e) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/34ca41f1d5cd6bd004c5504cc0dc5a382c624997) - @actions-user
+
+### 📚 Documentation
+- [Update CHANGELOG.md](https://github.com/RogerSelwyn/MS365-Teams/commit/e571bfb4fdfbf9fbf40883766abcc3917ddbfb22) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.0.1](https://github.com/RogerSelwyn/MS365-Teams/commit/5ed006171265913bb96dea736c5b1f2d3d9badac) - @RogerSelwyn
+
 ## v1.0.0 (2024/11/28)
 ### 🐛 Fixes
 - [Fix of shared permissions usage](https://github.com/RogerSelwyn/MS365-Teams/commit/3cf062f8beb6653a834cdf7c640213ca30c0d4cc) - @RogerSelwyn
