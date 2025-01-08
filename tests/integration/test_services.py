@@ -10,10 +10,10 @@ from homeassistant.exceptions import ServiceValidationError
 from custom_components.ms365_teams.integration.const_integration import (
     CONF_CHAT_ENABLE,
     CONF_STATUS_ENABLE,
-    DOMAIN,
 )
 
 from ..conftest import MS365MockConfigEntry
+from .const_integration import DOMAIN
 
 
 async def test_update_service_setup(
@@ -189,7 +189,7 @@ async def test_chat_failed_permission(
     failed_perm = "teams.failed_perm"
     with (
         patch(
-            "custom_components.ms365_teams.integration.sensor_integration.PERM_CHAT_READWRITE",
+            f"custom_components.{DOMAIN}.integration.sensor_integration.PERM_CHAT_READWRITE",
             failed_perm,
         ),
         pytest.raises(ServiceValidationError) as exc_info,
@@ -227,7 +227,7 @@ async def test_presence_failed_permission(
     failed_perm = "teams.failed_perm"
     with (
         patch(
-            "custom_components.ms365_teams.integration.sensor_integration.PERM_PRESENCE_READWRITE",
+            f"custom_components.{DOMAIN}.integration.sensor_integration.PERM_PRESENCE_READWRITE",
             failed_perm,
         ),
         pytest.raises(ServiceValidationError) as exc_info,
@@ -252,7 +252,7 @@ async def test_presence_failed_permission(
 
     with (
         patch(
-            "custom_components.ms365_teams.integration.sensor_integration.PERM_PRESENCE_READWRITE",
+            f"custom_components.{DOMAIN}.integration.sensor_integration.PERM_PRESENCE_READWRITE",
             failed_perm,
         ),
         pytest.raises(ServiceValidationError) as exc_info,

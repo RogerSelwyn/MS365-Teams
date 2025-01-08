@@ -68,8 +68,6 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         return self.keys
 
     async def _async_status_sensors(self):
-        keys = []
-
         if self._entry.data[CONF_STATUS_ENABLE] != EnableOptions.DISABLED:
             name = f"{self._entry.data[CONF_ENTITY_NAME]}_status"
             new_key = {
@@ -88,12 +86,10 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
                 )
                 new_key[CONF_EMAIL_ACCOUNT] = email_account.object_id
 
-            keys.append(new_key)
-        return keys
+            return [new_key]
+        return []
 
     def _chat_sensors(self):
-        keys = []
-
         if self._entry.data[CONF_CHAT_ENABLE] != EnableOptions.DISABLED:
             name = f"{self._entry.data[CONF_ENTITY_NAME]}_chat"
             new_key = {
@@ -105,8 +101,8 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
                 CONF_ENTITY_TYPE: SENSOR_TEAMS_CHAT,
             }
 
-            keys.append(new_key)
-        return keys
+            return [new_key]
+        return []
 
     async def _async_update_data(self):
         _LOGGER.debug(

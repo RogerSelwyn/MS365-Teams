@@ -1,7 +1,9 @@
 """Permissions processes for mail."""
 
+from copy import deepcopy
+
 from ..classes.permissions import BasePermissions
-from ..const import PERM_OFFLINE_ACCESS, PERM_USER_READ
+from ..const import PERM_BASE_PERMISSIONS
 from .const_integration import (
     CONF_ALTERNATE_EMAIL,
     CONF_CHAT_ENABLE,
@@ -30,7 +32,7 @@ class Permissions(BasePermissions):
     def requested_permissions(self):
         """Return the required scope."""
         if not self._requested_permissions:
-            self._requested_permissions = [PERM_OFFLINE_ACCESS, PERM_USER_READ]
+            self._requested_permissions = deepcopy(PERM_BASE_PERMISSIONS)
             self._build_chat_permissions()
             self._build_status_permissions()
 
