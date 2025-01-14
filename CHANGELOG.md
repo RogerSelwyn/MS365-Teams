@@ -1,5 +1,27 @@
 # Changelog
 
+## v1.0.2 (2025/01/14)
+### 🧰 Maintenance
+- [Add protections in line with base](https://github.com/RogerSelwyn/MS365-Teams/commit/43b8bc071faebdfd0a05db8b007cffcb8e7ffdd8) - @RogerSelwyn
+- [Correct integration name](https://github.com/RogerSelwyn/MS365-Teams/commit/1a35e6ddf53f65e766a648287ce70326086a7d78) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [Bump Home Assistant to 2024.12.0](https://github.com/RogerSelwyn/MS365-Teams/commit/c4345604052186b568cf5a498f2a7124b9a27c94) - @RogerSelwyn
+
+### 📚 Documentation
+- [Update CHANGELOG.md](https://github.com/RogerSelwyn/MS365-Teams/commit/5befe5d90238ba7a6ddc75e51af1cdf83b99fff0) - @RogerSelwyn
+- [Update README.md](https://github.com/RogerSelwyn/MS365-Teams/commit/7e1cdaed095fe21204e27be9364f3f4ae04938f8) - @RogerSelwyn
+- [Update README.md](https://github.com/RogerSelwyn/MS365-Teams/commit/fa461d0e61fdcc06cc6305c391fdd4bbb5ad7a1c) - @RogerSelwyn
+- [Update authentication.md](https://github.com/RogerSelwyn/MS365-Teams/commit/9fdcc09d49b213f84cc2d14c3aad4b5445dfab8a) - @RogerSelwyn
+- [Update README.md](https://github.com/RogerSelwyn/MS365-Teams/commit/ddc2edc1a1a23e7ca8e7e1b01c733bda415bd933) - @RogerSelwyn
+
+### ✅ Test
+- [Bump pytest-cov to 6.0.0](https://github.com/RogerSelwyn/MS365-Teams/commit/41e2f6206268298ea0f5699f809dcf51d1ca4835) - @RogerSelwyn
+- [Remove unrequired dependencies](https://github.com/RogerSelwyn/MS365-Teams/commit/fb1463270bf8fa0b0d43edc893c5a2dc96e92984) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.0.2](https://github.com/RogerSelwyn/MS365-Teams/commit/433b31b490a4b8cc3c4ebb2206223196d08119d5) - @RogerSelwyn
+
 ## v1.0.1 (2024/11/30)
 ### 🧰 Maintenance
 - [Add support for migration from o365 integration](https://github.com/RogerSelwyn/MS365-Teams/commit/f01add8067b62fefd889733c5ba1d484691ebc0e) - @RogerSelwyn
