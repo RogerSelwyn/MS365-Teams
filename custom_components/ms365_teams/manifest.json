@@ -1,6 +1,6 @@
 {
   "domain": "ms365_teams",
-  "name": "Micosoft 365 - Teams",
+  "name": "Microsoft 365 - Teams",
   "codeowners": [
     "@RogerSelwyn"
   ],
@@ -20,5 +20,5 @@
     "O365==2.0.38",
     "BeautifulSoup4>=4.10.0"
   ],
-  "version": "v1.0.1"
+  "version": "v1.0.2"
 }
