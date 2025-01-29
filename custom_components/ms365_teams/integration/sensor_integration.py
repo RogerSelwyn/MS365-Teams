@@ -149,7 +149,7 @@ class MS365TeamsSensor(MS365Entity):
     ):
         """Initialise the Teams Sensor."""
         super().__init__(coordinator, entry, name, entity_id, unique_id)
-        self.teams = self._entry.runtime_data.account.teams()
+        self.teams = self._entry.runtime_data.ha_account.account.teams()
         self._application_id = entry.data[CONF_CLIENT_ID]
 
     @property
