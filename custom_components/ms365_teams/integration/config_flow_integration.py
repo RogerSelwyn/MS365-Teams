@@ -7,7 +7,7 @@ from homeassistant import (
 )
 from homeassistant.data_entry_flow import FlowResult
 
-from ..helpers.config_entry import MS365ConfigEntry
+from ..classes.config_entry import MS365ConfigEntry
 from .const_integration import (
     CONF_ALTERNATE_EMAIL,
     CONF_CHAT_ENABLE,

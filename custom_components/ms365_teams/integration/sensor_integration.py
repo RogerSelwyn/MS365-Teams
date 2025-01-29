@@ -14,6 +14,7 @@ from O365.teams import (  # pylint: disable=import-error, no-name-in-module
     PreferredAvailability,
 )
 
+from ..classes.config_entry import MS365ConfigEntry
 from ..classes.entity import MS365Entity
 from ..const import (
     ATTR_DATA,
@@ -23,7 +24,6 @@ from ..const import (
     CONF_ENTITY_TYPE,
     EVENT_HA_EVENT,
 )
-from ..helpers.config_entry import MS365ConfigEntry
 from .const_integration import (
     ATTR_ACTIVITY,
     ATTR_AVAILABILITY,
