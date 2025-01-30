@@ -20,9 +20,9 @@ from .const_integration import (
 class Permissions(BasePermissions):
     """Class in support of building permission sets."""
 
-    def __init__(self, hass, config):
+    def __init__(self, hass, config, token_backend):
         """Initialise the class."""
-        super().__init__(hass, config)
+        super().__init__(hass, config, token_backend)
 
         self._chat_enable = self._config.get(CONF_CHAT_ENABLE)
         self._status_enable = self._config.get(CONF_STATUS_ENABLE)
