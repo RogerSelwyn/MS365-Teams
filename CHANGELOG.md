@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.3.0 (2025/02/16)
+### 🐛 Fixes
+- [Handle expired token/invalid grant](https://github.com/RogerSelwyn/MS365-Teams/commit/dff5ab0f65dde6684ae559c30ff93b3d81568726) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Add bug reporting templates](https://github.com/RogerSelwyn/MS365-Teams/commit/d24cfa9367102a1204b437740db42906a8b69b00) - @RogerSelwyn
+- [Updated with latest msal changes](https://github.com/RogerSelwyn/MS365-Teams/commit/4c1f68295f73892358e193c7eae6e177f05f13ed) - @RogerSelwyn
+- [Update inline with fix in Mail](https://github.com/RogerSelwyn/MS365-Teams/commit/c7d25143046e2eb6054ae9870e97b82069a90531) - @RogerSelwyn
+- [Add link to re-configure in Issue text](https://github.com/RogerSelwyn/MS365-Teams/commit/8578e4c3fe07cf6782348386940e06cdcdbe3988) - @RogerSelwyn
+- [Break account out from permissions](https://github.com/RogerSelwyn/MS365-Teams/commit/0afd3efb848524acc9935288eb3acab240ac2209) - @RogerSelwyn
+- [Tidy up runtime_data](https://github.com/RogerSelwyn/MS365-Teams/commit/ba671a51e6ebeaa5bd3c83ced617bf681477b175) - @RogerSelwyn
+- [Break out token_backend from permissions](https://github.com/RogerSelwyn/MS365-Teams/commit/93b04f2c6cc906c98747f7a692068e23ae421410) - @RogerSelwyn
+- [build(deps): bump ruff from 0.9.1 to 0.9.4](https://github.com/RogerSelwyn/MS365-Teams/commit/ba3980e864ffdda1518688d7f73b8ba6c0f556e1) - @dependabot[bot]
+ 
+### 🔖 Release
+- [Release v1.3.0](https://github.com/RogerSelwyn/MS365-Teams/commit/d4d7a279b5ab2fc0d85468ff431652deac74e0cf) - @RogerSelwyn
+
+
 ## v1.0.2 (2025/01/14)
 ### 🧰 Maintenance
 - [Add protections in line with base](https://github.com/RogerSelwyn/MS365-Teams/commit/43b8bc071faebdfd0a05db8b007cffcb8e7ffdd8) - @RogerSelwyn
