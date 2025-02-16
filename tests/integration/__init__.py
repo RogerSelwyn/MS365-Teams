@@ -2,7 +2,7 @@
 
 """Tests for MS365."""
 
-from custom_components.ms365_teams.classes import permissions  # noqa: F401
+from custom_components.ms365_teams.classes import api  # noqa: F401
 from custom_components.ms365_teams.diagnostics import (
     async_get_config_entry_diagnostics,  # noqa: F401
 )

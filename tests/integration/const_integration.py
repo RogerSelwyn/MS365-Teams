@@ -4,6 +4,7 @@
 from copy import deepcopy
 from enum import Enum
 
+from custom_components.ms365_teams.config_flow import MS365ConfigFlow  # noqa: F401
 from custom_components.ms365_teams.const import (  # noqa: F401
     AUTH_CALLBACK_PATH_ALT,
     AUTH_CALLBACK_PATH_DEFAULT,
@@ -42,12 +43,11 @@ DIAGNOSTIC_GRANTED_PERMISSIONS = [
     "Chat.Read",
     "Presence.Read",
     "User.Read",
-    "profile",
-    "openid",
     "email",
+    "openid",
+    "profile",
 ]
 DIAGNOSTIC_REQUESTED_PERMISSIONS = [
-    "offline_access",
     "User.Read",
     "Chat.Read",
     "Presence.Read",
@@ -59,6 +59,9 @@ FULL_INIT_ENTITY_NO = 2
 class URL(Enum):
     """List of URLs"""
 
+    OPENID = (
+        "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration"
+    )
     ME = "https://graph.microsoft.com/v1.0/me"
     CHATS = "https://graph.microsoft.com/v1.0/me/chats"
     CHAT1_MESSAGES = "https://graph.microsoft.com/v1.0//chats/chat1/messages"
