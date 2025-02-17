@@ -1,5 +1,19 @@
 # Changelog
 
+## v1.3.1 (2025/02/17)
+### 🐛 Fixes
+- [Fix permissions for monitoring another user's status](https://github.com/RogerSelwyn/MS365-Teams/commit/dfd0b63f897138f02ce72ed1fce1e2bbe9ca2b5f) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [Reduce constraint on O365 dependency](https://github.com/RogerSelwyn/MS365-Teams/commit/146a5a295effbc5ecb3656c0b9d6d2452ed4d39c) - @RogerSelwyn
+- [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/2d3861d6f8ef217d24504c9df6906b1afc398372) - @actions-user
+
+### ✅ Test
+- [Fix tests for permissions](https://github.com/RogerSelwyn/MS365-Teams/commit/71f92409c51385d5e79050eb4e568ae456ab692d) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.3.1](https://github.com/RogerSelwyn/MS365-Teams/commit/00c5d4bc4582b83cd8341e3813f73344a89d7610) - @RogerSelwyn
+
 ## v1.3.0 (2025/02/16)
 ### 🐛 Fixes
 - [Handle expired token/invalid grant](https://github.com/RogerSelwyn/MS365-Teams/commit/dff5ab0f65dde6684ae559c30ff93b3d81568726) - @RogerSelwyn
