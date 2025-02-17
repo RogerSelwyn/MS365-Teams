@@ -41,6 +41,7 @@ PERM_CHAT_READWRITE = "Chat.ReadWrite"
 PERM_PRESENCE_READ = "Presence.Read"
 PERM_PRESENCE_READ_ALL = "Presence.Read.All"
 PERM_PRESENCE_READWRITE = "Presence.ReadWrite"
+PERM_USER_READBASIC_ALL = "User.ReadBasic.All"
 
 SENSOR_TEAMS_STATUS = "teams_status"
 SENSOR_TEAMS_CHAT = "teams_chat"

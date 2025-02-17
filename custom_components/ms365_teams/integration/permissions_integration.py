@@ -13,6 +13,7 @@ from .const_integration import (
     PERM_PRESENCE_READ,
     PERM_PRESENCE_READ_ALL,
     PERM_PRESENCE_READWRITE,
+    PERM_USER_READBASIC_ALL,
     EnableOptions,
 )
 
@@ -45,6 +46,7 @@ class Permissions(BasePermissions):
             self._requested_permissions.append(PERM_PRESENCE_READ)
         if self._alternate_email:
             self._requested_permissions.append(PERM_PRESENCE_READ_ALL)
+            self._requested_permissions.append(PERM_USER_READBASIC_ALL)
 
     def _build_chat_permissions(self):
         if self._chat_enable == EnableOptions.UPDATE:

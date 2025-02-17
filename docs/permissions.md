@@ -16,6 +16,7 @@ Under "API Permissions" click Add a permission, then Microsoft Graph, then Deleg
    | Status   | Presence.Read              |        | *Read user's presence information*                             | Not for personal accounts/shared mailboxes |
    | Status   | Presence.ReadWrite         | Y      | *Read and write a user's presence information*                 | Not for personal accounts/shared mailboxes |
    | Status   | Presence.Read.All          |        | *Read presence information of all users in your organization*  | Used if you want to monitor another user's status. Not for personal accounts/shared mailboxes |
+   | Status   | User.ReadBasic.All         |        | *Read all users' basic profiles*                               | Used if you want to monitor another user's status. Not for personal accounts/shared mailboxes |
    
 
 ## Changing Features and Permissions
