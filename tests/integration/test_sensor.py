@@ -102,7 +102,7 @@ async def test_get_update_chat_systemevent(
     indirect=True,
 )
 @pytest.mark.parametrize(
-    "base_token", ["Presence.Read Presence.Read.All"], indirect=True
+    "base_token", ["Presence.Read Presence.Read.All User.ReadBasic.All"], indirect=True
 )
 async def test_get_other_user_status(
     hass: HomeAssistant,

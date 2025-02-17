@@ -29,7 +29,9 @@ async def test_base_permissions(
     indirect=True,
 )
 @pytest.mark.parametrize(
-    "base_token", ["Chat.Read Presence.Read Presence.Read.All"], indirect=True
+    "base_token",
+    ["Chat.Read Presence.Read Presence.Read.All User.ReadBasic.All"],
+    indirect=True,
 )
 async def test_read_all_permissions(
     hass: HomeAssistant,
@@ -38,6 +40,9 @@ async def test_read_all_permissions(
 ) -> None:
     """Test base permissions."""
     assert "Presence.Read.All" in base_config_entry.runtime_data.permissions.permissions
+    assert (
+        "User.ReadBasic.All" in base_config_entry.runtime_data.permissions.permissions
+    )
 
 
 async def test_update_permissions(
@@ -92,7 +97,10 @@ async def test_read_all_missing_permissions(
     ) as mock_async_create_issue:
         await hass.config_entries.async_setup(base_config_entry.entry_id)
 
-    assert "Minimum required permissions: 'Presence.Read.All'" in caplog.text
+    assert (
+        "Minimum required permissions: 'Presence.Read.All, User.ReadBasic.All'"
+        in caplog.text
+    )
     assert mock_async_create_issue.called
 
 

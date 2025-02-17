@@ -130,7 +130,9 @@ async def test_presence_services(
     indirect=True,
 )
 @pytest.mark.parametrize(
-    "base_token", ["Presence.ReadWrite Presence.Read.All"], indirect=True
+    "base_token",
+    ["Presence.ReadWrite Presence.Read.All User.ReadBasic.All"],
+    indirect=True,
 )
 async def test_presence_service_failures(
     hass: HomeAssistant,
