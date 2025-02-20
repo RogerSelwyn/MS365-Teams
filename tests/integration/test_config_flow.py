@@ -6,6 +6,10 @@ from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResultType
 from requests_mock import Mocker
 
+from custom_components.ms365_teams.integration.const_integration import (
+    CONF_UPDATE_INTERVAL,
+)
+
 from ..const import CLIENT_ID, CLIENT_SECRET, ENTITY_NAME
 from ..helpers.mock_config_entry import MS365MockConfigEntry
 from ..helpers.utils import mock_token
@@ -53,7 +57,30 @@ async def test_options_flow(
     """Test the options flow"""
 
     result = await hass.config_entries.options.async_init(base_config_entry.entry_id)
+
+    assert result["type"] is FlowResultType.FORM
+    assert result["step_id"] == "user"
+    schema = result["data_schema"].schema
+    assert get_schema_default(schema, CONF_UPDATE_INTERVAL) == 30
+
+    result = await hass.config_entries.options.async_configure(
+        result["flow_id"],
+        user_input={
+            CONF_UPDATE_INTERVAL: 5,
+        },
+    )
     assert result.get("type") is FlowResultType.CREATE_ENTRY
     assert "result" in result
     assert result["result"] is True
-    assert result["data"] is None
+    assert result["data"][CONF_UPDATE_INTERVAL] == 5
+
+
+def get_schema_default(schema, key_name):
+    """Iterate schema to find a key."""
+    for schema_key in schema:
+        if schema_key == key_name:
+            try:
+                return schema_key.default()
+            except TypeError:
+                return None
+    raise KeyError(f"{key_name} not found in schema")

@@ -31,6 +31,8 @@ from .const_integration import (
     CONF_CHAT_ENABLE,
     CONF_EMAIL_ACCOUNT,
     CONF_STATUS_ENABLE,
+    CONF_UPDATE_INTERVAL,
+    DEFAULT_UPDATE_INTERVAL,
     ENTITY_ID_FORMAT_SENSOR,
     SENSOR_TEAMS_CHAT,
     SENSOR_TEAMS_STATUS,
@@ -45,13 +47,16 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
 
     def __init__(self, hass: HomeAssistant, entry: ConfigEntry, account):
         """Initialize my coordinator."""
+        update_interval = entry.options.get(
+            CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL
+        )
         super().__init__(
             hass,
             _LOGGER,
             # Name of the data. For logging purposes.
             name="MS365 Teams",
             # Polling interval. Will only be polled if there are subscribers.
-            update_interval=timedelta(seconds=30),
+            update_interval=timedelta(seconds=update_interval),
         )
         self._entry = entry
         self._account = account
@@ -106,7 +111,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
 
     async def _async_update_data(self):
         _LOGGER.debug(
-            "Doing %s email update(s) for: %s", len(self.keys), self._entity_name
+            "Doing %s sensor update(s) for: %s", len(self.keys), self._entity_name
         )
 
         for key in self.keys:

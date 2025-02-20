@@ -40,6 +40,16 @@
             }
         }
     },
+    "options": {
+        "step": {
+            "user": {
+                "data": {
+                    "update_interval": "Update interval in seconds"
+                },
+                "description": "Setup options for {entity_name}"
+            }
+        }
+    },
     "issues": {
         "corrupted": {
             "title": "Re-authentication required - {domain} - {entity_name}",

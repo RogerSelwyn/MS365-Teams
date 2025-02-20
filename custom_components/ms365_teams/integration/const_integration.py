@@ -26,8 +26,11 @@ CONF_ALTERNATE_EMAIL = "alternate_email"
 CONF_CHAT_ENABLE = "chat_enable"
 CONF_EMAIL_ACCOUNT = "email_account"
 CONF_STATUS_ENABLE = "status_enable"
+CONF_UPDATE_INTERVAL = "update_interval"
 
 CONTENT_TYPES = ["text", "html"]
+
+DEFAULT_UPDATE_INTERVAL = 30
 
 ENTITY_ID_FORMAT_SENSOR = "sensor.{}"
 

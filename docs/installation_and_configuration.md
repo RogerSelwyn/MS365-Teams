@@ -43,4 +43,6 @@ Key | Type | Required | Description
 
 ### Options variables
 
-There are no options for the integration.
+Key | Type | Required | Description
+-- | -- | -- | --
+`update_interval` | `int` | `False` | The update interval for the status and chat sensors in seconds. Default 30, Min 1, Max 60.

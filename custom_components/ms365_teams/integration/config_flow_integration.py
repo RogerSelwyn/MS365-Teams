@@ -8,10 +8,13 @@ from homeassistant import (
 from homeassistant.data_entry_flow import FlowResult
 
 from ..classes.config_entry import MS365ConfigEntry
+from ..const import CONF_ENTITY_NAME
 from .const_integration import (
     CONF_ALTERNATE_EMAIL,
     CONF_CHAT_ENABLE,
     CONF_STATUS_ENABLE,
+    CONF_UPDATE_INTERVAL,
+    DEFAULT_UPDATE_INTERVAL,
     EnableOptions,
 )
 
@@ -64,4 +67,31 @@ class MS365OptionsFlowHandler(config_entries.OptionsFlow):
     async def async_step_user(self, user_input=None) -> FlowResult:
         """Handle a flow initialized by the user."""
 
-        return self.async_create_entry(title="", data=user_input)
+        errors = {}
+
+        if user_input:
+            return await self._async_tidy_up(user_input)
+
+        return self.async_show_form(
+            step_id="user",
+            description_placeholders={
+                CONF_ENTITY_NAME: self.config_entry.data[CONF_ENTITY_NAME]
+            },
+            data_schema=vol.Schema(
+                {
+                    vol.Required(
+                        CONF_UPDATE_INTERVAL,
+                        default=self.config_entry.options.get(
+                            CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL
+                        ),
+                    ): vol.All(vol.Coerce(int), vol.Range(min=1, max=60)),
+                }
+            ),
+            errors=errors,
+            last_step=True,
+        )
+
+    async def _async_tidy_up(self, user_input):
+        update = self.async_create_entry(title="", data=user_input)
+        await self.hass.config_entries.async_reload(self._config_entry_id)
+        return update
