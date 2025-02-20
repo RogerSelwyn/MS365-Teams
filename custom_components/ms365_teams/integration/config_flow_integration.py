@@ -67,10 +67,10 @@ class MS365OptionsFlowHandler(config_entries.OptionsFlow):
     async def async_step_user(self, user_input=None) -> FlowResult:
         """Handle a flow initialized by the user."""
 
-        errors = {}
-
         if user_input:
             return await self._async_tidy_up(user_input)
+
+        errors = {}
 
         return self.async_show_form(
             step_id="user",
