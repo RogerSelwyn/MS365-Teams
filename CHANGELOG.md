@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.3.2 (2025/02/20)
+### ✨ Enhancements
+- [Add configurable polling interval](https://github.com/RogerSelwyn/MS365-Teams/commit/94720f8ded5de16657b2cb0a76bb61818338fb4f) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Sourcery recommendation](https://github.com/RogerSelwyn/MS365-Teams/commit/988f3db17960274623abfe145bc81d37f8cc67ca) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.3.2](https://github.com/RogerSelwyn/MS365-Teams/commit/80139749c37697c10658c3b8d512f44006222f62) - @RogerSelwyn
+
 ## v1.3.1 (2025/02/17)
 ### 🐛 Fixes
 - [Fix permissions for monitoring another user's status](https://github.com/RogerSelwyn/MS365-Teams/commit/dfd0b63f897138f02ce72ed1fce1e2bbe9ca2b5f) - @RogerSelwyn
