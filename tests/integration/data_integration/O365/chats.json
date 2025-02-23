@@ -34,15 +34,15 @@
         {
             "id": "chat3",
             "topic": "Unknown topic",
-            "createdDateTime": "0001-01-01T00:00:00Z",
-            "lastUpdatedDateTime": "0001-01-01T00:00:00Z",
+            "createdDateTime": "1901-01-01T00:00:00Z",
+            "lastUpdatedDateTime": "1901-01-01T00:00:00Z",
             "chatType": "unknownFutureValue",
             "webUrl": null,
             "tenantId": null,
             "onlineMeetingInfo": null,
             "viewpoint": {
                 "isHidden": false,
-                "lastMessageReadDateTime": "0001-01-01T00:00:00Z"
+                "lastMessageReadDateTime": "1901-01-01T00:00:00Z"
             }
         }
     ]

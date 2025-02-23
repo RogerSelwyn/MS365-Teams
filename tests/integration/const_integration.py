@@ -7,7 +7,9 @@ from enum import Enum
 from custom_components.ms365_teams.config_flow import MS365ConfigFlow  # noqa: F401
 from custom_components.ms365_teams.const import (  # noqa: F401
     AUTH_CALLBACK_PATH_ALT,
-    AUTH_CALLBACK_PATH_DEFAULT,
+    COUNTRY_URLS,
+    OAUTH_REDIRECT_URL,
+    CountryOptions,
 )
 from custom_components.ms365_teams.integration.const_integration import (
     DOMAIN,  # noqa: F401
@@ -15,6 +17,7 @@ from custom_components.ms365_teams.integration.const_integration import (
 
 from ..const import CLIENT_ID, CLIENT_SECRET, ENTITY_NAME
 
+AUTH_CALLBACK_PATH_DEFAULT = COUNTRY_URLS[CountryOptions.DEFAULT][OAUTH_REDIRECT_URL]
 BASE_CONFIG_ENTRY = {
     "entity_name": ENTITY_NAME,
     "client_id": CLIENT_ID,
@@ -22,6 +25,7 @@ BASE_CONFIG_ENTRY = {
     "alt_auth_method": False,
     "chat_enable": "Read",
     "status_enable": "Read",
+    "api_options": {"country": "Default"},
 }
 BASE_TOKEN_PERMS = "Chat.Read Presence.Read"
 BASE_MISSING_PERMS = "Chat.Read, Presence.Read"
@@ -30,6 +34,8 @@ UPDATE_OPTIONS = {"chat_enable": "Update", "status_enable": "Update"}
 
 ALT_CONFIG_ENTRY = deepcopy(BASE_CONFIG_ENTRY)
 ALT_CONFIG_ENTRY["alt_auth_method"] = True
+COUNTRY_CONFIG_ENTRY = deepcopy(BASE_CONFIG_ENTRY)
+COUNTRY_CONFIG_ENTRY["api_options"]["country"] = "21Vianet (China)"
 
 RECONFIGURE_CONFIG_ENTRY = deepcopy(BASE_CONFIG_ENTRY)
 del RECONFIGURE_CONFIG_ENTRY["entity_name"]
@@ -71,3 +77,16 @@ class URL(Enum):
     PRESENCE = "https://graph.microsoft.com/v1.0/me/presence"
     ALTERNATE_PRESENCE = "https://graph.microsoft.com/v1.0/users/fake_user_id2/presence"
     ALTERNATE_USER = "https://graph.microsoft.com/v1.0/users/jane@nomail.com"
+
+
+class CN21VURL(Enum):
+    """List of URLs"""
+
+    DISCOVERY = "https://login.microsoftonline.com/common/discovery/instance"
+    OPENID = "https://login.partner.microsoftonline.cn/common/v2.0/.well-known/openid-configuration"
+    ME = "https://microsoftgraph.chinacloudapi.cn/v1.0/me"
+    CHATS = "https://microsoftgraph.chinacloudapi.cn/v1.0/me/chats"
+    CHAT1_MESSAGES = (
+        "https://microsoftgraph.chinacloudapi.cn/v1.0//chats/chat1/messages"
+    )
+    PRESENCE = "https://microsoftgraph.chinacloudapi.cn/v1.0/me/presence"

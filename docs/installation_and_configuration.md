@@ -41,6 +41,14 @@ Key | Type | Required | Description
 `status_enable` | `string` | `False` | Disabled, **Read**, Update - Enable or disable status sensor
 `alternate_email` | `string` | `False` | Email address to monitor status for. `status_enable` must be `Read`
 
+#### Advanced API Options
+
+ These options will only be relevant for users in very specific circumstances.
+
+ Key | Type | Required | Description
+ -- | -- | -- | --
+ `country` | `string` | `True` | Selection of an alternate country specific API. Currently only 21Vianet from China.
+
 ### Options variables
 
 Key | Type | Required | Description

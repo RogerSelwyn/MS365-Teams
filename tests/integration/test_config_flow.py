@@ -38,9 +38,9 @@ async def test_invalid_config(
             "chat_enable": "Disabled",
             "status_enable": "Update",
             "alternate_email": "jane@nomail.com",
+            "api_options": {"country": "Default"},
         },
     )
-    print(result)
 
     assert result["type"] is FlowResultType.FORM
     assert result["step_id"] == "user"

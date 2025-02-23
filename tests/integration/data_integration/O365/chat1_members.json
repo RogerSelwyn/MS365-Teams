@@ -10,7 +10,7 @@
                 "owner"
             ],
             "displayName": "John Doe",
-            "visibleHistoryStartDateTime": "0001-01-01T00:00:00Z",
+            "visibleHistoryStartDateTime": "1901-01-01T00:00:00Z",
             "userId": "fake_user_id",
             "email": "john@nomail.com",
             "tenantId": "tenantid"
@@ -22,7 +22,7 @@
                 "owner"
             ],
             "displayName": "Jane Doe",
-            "visibleHistoryStartDateTime": "0001-01-01T00:00:00Z",
+            "visibleHistoryStartDateTime": "1901-01-01T00:00:00Z",
             "userId": "fake-user-id2",
             "email": "jane@nomail.com",
             "tenantId": "tenantid"

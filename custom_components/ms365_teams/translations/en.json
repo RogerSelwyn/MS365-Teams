@@ -24,7 +24,19 @@
                     "status_enable": "Status sensor",
                     "alternate_email": "Email address to monitor status for"
                 },
-                "description": "Enter previously created Entra ID App Registration credentials"
+                "description": "Enter previously created Entra ID App Registration credentials",
+                "sections": {
+                    "api_options": {
+                        "name": "Advanced API options",
+                        "description": "Advanced options for country specific needs",
+                        "data": {
+                            "country": "API Country"
+                        },
+                        "data_description": {
+                            "country": "Only use if you know you need it since your credentials will be sent to the selected api/country."
+                        }
+                    }
+                }
             },
             "request_default": {
                 "title": "Authorization Required - {entity_name}",

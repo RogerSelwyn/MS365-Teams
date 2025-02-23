@@ -3,11 +3,20 @@
 # from datetime import timedelta
 
 from ...helpers.utils import mock_call  # utcnow
-from ..const_integration import URL
+from ..const_integration import CN21VURL, URL
 
 
 class MS365Mocks:
     """Standard mocks."""
+
+    def cn21v_mocks(self, requests_mock):
+        """Setup the standard mocks."""
+        mock_call(requests_mock, CN21VURL.DISCOVERY, "discovery")
+        mock_call(requests_mock, CN21VURL.OPENID, "openid")
+        mock_call(requests_mock, CN21VURL.ME, "me")
+        mock_call(requests_mock, CN21VURL.CHATS, "chats")
+        mock_call(requests_mock, CN21VURL.CHAT1_MESSAGES, "chat1_messages")
+        mock_call(requests_mock, CN21VURL.PRESENCE, "presence")
 
     def standard_mocks(self, requests_mock):
         """Setup the standard mocks."""
