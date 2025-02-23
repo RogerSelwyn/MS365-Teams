@@ -1,5 +1,15 @@
 # Changelog
 
+## v1.4.0 (2025/02/23)
+### ✨ Enhancements
+- [Add support for 21Vianet (China)](https://github.com/RogerSelwyn/MS365-Teams/commit/3de9e8bd5302b4a372d1b6fbaf45d8d92d4ac50e) - @RogerSelwyn
+
+### 📚 Documentation
+- [Update bug_report.yml](https://github.com/RogerSelwyn/MS365-Teams/commit/8cbd85b63e6212e295ec774736ef78af7bb0cdb0) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.4.0](https://github.com/RogerSelwyn/MS365-Teams/commit/0ef1615fa5834b78a705b6b0fb93006aff7a1763) - @RogerSelwyn
+
 ## v1.3.2 (2025/02/20)
 ### ✨ Enhancements
 - [Add configurable polling interval](https://github.com/RogerSelwyn/MS365-Teams/commit/94720f8ded5de16657b2cb0a76bb61818338fb4f) - @RogerSelwyn
