@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.4.1 (2025/02/24)
+### 🐛 Fixes
+- [Ensure timezone is set on protocol](https://github.com/RogerSelwyn/MS365-Teams/commit/28c25ad2a91d3675556fd5d7d1e9213e5094d395) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.4.1](https://github.com/RogerSelwyn/MS365-Teams/commit/887f962a8b269c61201e2241a12f807cf2c17ebe) - @RogerSelwyn
+
 ## v1.4.0 (2025/02/23)
 ### ✨ Enhancements
 - [Add support for 21Vianet (China)](https://github.com/RogerSelwyn/MS365-Teams/commit/3de9e8bd5302b4a372d1b6fbaf45d8d92d4ac50e) - @RogerSelwyn
