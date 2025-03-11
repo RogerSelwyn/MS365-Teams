@@ -1,5 +1,24 @@
 # Changelog
 
+## v1.4.2 (2025/03/11)
+### 🐛 Fixes
+- [Fix issue with sending chat message](https://github.com/RogerSelwyn/MS365-Teams/commit/6a7abb5c65e969e60b88296985d011f3ebe4002e) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Sourcery recommendations](https://github.com/RogerSelwyn/MS365-Teams/commit/e7dd9ffd1d969df039b88366f53761db282da2ab) - @RogerSelwyn
+- [Workflow ordering](https://github.com/RogerSelwyn/MS365-Teams/commit/d57ad12188fd145be5a52ba27736af7436163e4b) - @RogerSelwyn
+- [Update bug report](https://github.com/RogerSelwyn/MS365-Teams/commit/85344c74e6bdbe42dd82390cbedb34a9f962bff6) - @RogerSelwyn
+
+### 📚 Documentation
+- [Update docs with correct items supported](https://github.com/RogerSelwyn/MS365-Teams/commit/98e19a998c07da45ba1420e7bac5dad695808ade) - @RogerSelwyn
+- [Update installation_and_configuration.md](https://github.com/RogerSelwyn/MS365-Teams/commit/d8ea9c18ed0fdc20cb0c19ada6aebdb8cf376365) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.4.2](https://github.com/RogerSelwyn/MS365-Teams/commit/41e53e06a40d82c9b6eaeda817a1a99a1419dad1) - @RogerSelwyn
+
+
+
+
 ## v1.4.1 (2025/02/24)
 ### 🐛 Fixes
 - [Ensure timezone is set on protocol](https://github.com/RogerSelwyn/MS365-Teams/commit/28c25ad2a91d3675556fd5d7d1e9213e5094d395) - @RogerSelwyn
