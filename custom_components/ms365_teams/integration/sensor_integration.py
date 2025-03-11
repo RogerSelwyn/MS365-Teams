@@ -279,7 +279,8 @@ class MS365TeamsChatSensor(MS365TeamsSensor, SensorEntity):
         self._validate_chat_permissions()
 
         chats = await self.hass.async_add_executor_job(self.teams.get_my_chats)
-        for chat in chats:
+        chatlist = await self.hass.async_add_executor_job(list, chats)
+        for chat in chatlist:
             if chat.object_id == chat_id:
                 message = await self.hass.async_add_executor_job(
                     ft.partial(
