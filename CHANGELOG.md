@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.4.3 (2025/03/14)
+### 🐛 Fixes
+- [Fix issue with token refresh - pin MSAL to 1.13.1](https://github.com/RogerSelwyn/MS365-Teams/commit/5635ef3a891fb26002631cce9c8c1cb9280f8557) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/7383e8a53a886090a39158cc1a5a79b0f9ed3e7c) - @actions-user
+
+### 🔖 Release
+- [Release v1.4.3](https://github.com/RogerSelwyn/MS365-Teams/commit/ce15e92022e76e7be4e5eb919a886576359862b3) - @RogerSelwyn
+
+
+
+
 ## v1.4.2 (2025/03/11)
 ### 🐛 Fixes
 - [Fix issue with sending chat message](https://github.com/RogerSelwyn/MS365-Teams/commit/6a7abb5c65e969e60b88296985d011f3ebe4002e) - @RogerSelwyn
