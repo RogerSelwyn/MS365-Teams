@@ -1,9 +1,10 @@
 # pylint: disable=unused-argument,line-too-long,wrong-import-order
 """Test main sensors testing."""
 
-from unittest.mock import patch
+from unittest.mock import patch, Mock
 
 import pytest
+from requests.exceptions import HTTPError
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import entity_registry as er
 from requests_mock import Mocker
@@ -128,3 +129,49 @@ async def test_run_update(
     await hass.async_block_till_done()
 
     assert mock_async_write_ha_state.called
+
+async def test_httperror_403(
+    hass: HomeAssistant,
+    setup_base_integration,
+    base_config_entry: MS365MockConfigEntry,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    """Test running coordinator update."""
+    coordinator = base_config_entry.runtime_data.coordinator
+    mock_resp = Mock()
+    mock_resp.status_code = 403
+    with patch(
+        "O365.teams.Chat.get_messages", side_effect=HTTPError(response=mock_resp)
+    ):
+        await coordinator.async_refresh()
+    await hass.async_block_till_done()
+
+    check_entity_state(
+        hass,
+        "sensor.test_chat",
+        "unknown",
+        attributes={
+            "data": None,
+            "content": None,
+            "subject": None,
+            "summary": None,
+        },
+    )
+
+
+async def test_httperror_not_403(
+    hass: HomeAssistant,
+    setup_base_integration,
+    base_config_entry: MS365MockConfigEntry,
+    caplog: pytest.LogCaptureFixture,
+) -> None:
+    """Test running coordinator update."""
+    coordinator = base_config_entry.runtime_data.coordinator
+    mock_resp = Mock()
+    mock_resp.status_code = 404
+    with patch(
+        "O365.teams.Chat.get_messages", side_effect=HTTPError(response=mock_resp)
+    ):
+        await coordinator.async_refresh()
+    await hass.async_block_till_done()
+    assert "Error requesting MS365 Teams data" in caplog.text

@@ -8,6 +8,7 @@ from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_NAME, CONF_UNIQUE_ID
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
+from requests.exceptions import HTTPError
 
 from ..const import (
     ATTR_DATA,
@@ -150,10 +151,17 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         for chat in chats:
             if chat.chat_type == "unknownFutureValue":
                 continue
+
+            messages = []
             if not state:
-                messages = await self.hass.async_add_executor_job(
-                    ft.partial(chat.get_messages, limit=10)
-                )
+                try:
+                    messages = await self.hass.async_add_executor_job(
+                        ft.partial(chat.get_messages, limit=10)
+                    )
+                except HTTPError as err:
+                    if err.response.status_code != 403:
+                        raise err
+
                 state, extra_attributes = self._process_chat_messages(messages)
 
             if self._entry.data[CONF_CHAT_ENABLE] == EnableOptions.UPDATE:

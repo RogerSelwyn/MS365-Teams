@@ -254,25 +254,20 @@ class MS365TeamsChatSensor(MS365TeamsSensor, SensorEntity):
     @property
     def extra_state_attributes(self):
         """Return entity specific state attributes."""
-        attributes = {
-            ATTR_FROM_DISPLAY_NAME: self.coordinator.data[self.entity_key][
-                ATTR_FROM_DISPLAY_NAME
-            ],
-            ATTR_CONTENT: self.coordinator.data[self.entity_key][ATTR_CONTENT],
-            ATTR_CHAT_ID: self.coordinator.data[self.entity_key][ATTR_CHAT_ID],
-            ATTR_IMPORTANCE: self.coordinator.data[self.entity_key][ATTR_IMPORTANCE],
-        }
-        if self.coordinator.data[self.entity_key][ATTR_SUBJECT]:
-            attributes[ATTR_SUBJECT] = self.coordinator.data[self.entity_key][
-                ATTR_SUBJECT
-            ]
-        if self.coordinator.data[self.entity_key][ATTR_SUMMARY]:
-            attributes[ATTR_SUMMARY] = self.coordinator.data[self.entity_key][
-                ATTR_SUMMARY
-            ]
-        if self.coordinator.data[self.entity_key][ATTR_DATA]:
-            attributes[ATTR_DATA] = self.coordinator.data[self.entity_key][ATTR_DATA]
+        attributes = {}
+        self._add_attribute(attributes, ATTR_FROM_DISPLAY_NAME, True)
+        self._add_attribute(attributes, ATTR_CONTENT, True)
+        self._add_attribute(attributes, ATTR_IMPORTANCE, True)
+        self._add_attribute(attributes, ATTR_SUBJECT, False)
+        self._add_attribute(attributes, ATTR_SUMMARY, False)
+        self._add_attribute(attributes, ATTR_DATA, False)
+
         return attributes
+
+    def _add_attribute(self, attributes, attribute_name, always_add):
+        attribute = self.coordinator.data[self.entity_key].get(attribute_name, None)
+        if attribute or always_add:
+            attributes[attribute_name] = attribute
 
     async def async_send_chat_message(self, chat_id, message, content_type):
         """Send a message to the specified chat."""
