@@ -6,7 +6,6 @@
   ],
   "config_flow": true,
   "dependencies": [
-    "configurator",
     "http"
   ],
   "documentation": "https://github.com/RogerSelwyn/MS365-Teams",
