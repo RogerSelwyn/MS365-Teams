@@ -1,5 +1,35 @@
 # Changelog
 
+## v1.4.4 (2025/05/18)
+### 🐛 Fixes
+- [Handle 403 on get_messages from unauthorised tenant](https://github.com/RogerSelwyn/MS365-Teams/commit/e697b79b62cceeebc05f6e94f02bc294e1910ead) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Update bug_report.yml](https://github.com/RogerSelwyn/MS365-Teams/commit/dfc2b420246c94e3f8da7cf042b313a50ebdcdd5) - @RogerSelwyn
+- [Unpin MSAL](https://github.com/RogerSelwyn/MS365-Teams/commit/5847230880f9d7526232a1dc0c9146f2640b3019) - @RogerSelwyn
+- [Remove configurator as dependency](https://github.com/RogerSelwyn/MS365-Teams/commit/88f06f4a574f4257379d3810487c0c626921ef4c) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [Update ruff to 0.11.0](https://github.com/RogerSelwyn/MS365-Teams/commit/1e92aa1f5dd81117863a96783b7ad5af50be14a4) - @RogerSelwyn
+- [Bump python-o365 to 2.1.1](https://github.com/RogerSelwyn/MS365-Teams/commit/70693a898376b9f43926c694d5444cc19a5a30cd) - @RogerSelwyn
+- [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/011a9c93ae6b276905db45aaa9a0c45b1680a329) - @actions-user
+
+### 📚 Documentation
+- [Update docs](https://github.com/RogerSelwyn/MS365-Teams/commit/a4ae386c060049f7aa3b50665c95b96f2c83471b) - @RogerSelwyn
+- [Update readme](https://github.com/RogerSelwyn/MS365-Teams/commit/bd1d8fb624f716fa5f8dd770440615406a52ec44) - @RogerSelwyn
+
+### ✅ Test
+- [Add .python-version for Rye](https://github.com/RogerSelwyn/MS365-Teams/commit/1c66e4cced9cfbbcf8361b137954f6fa4d9f3051) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.4.4](https://github.com/RogerSelwyn/MS365-Teams/commit/ee7f90cd5ae4ceb824a0c5b3eb147505a9e4aa89) - @RogerSelwyn
+
+### Other
+- [build(deps): bump ruff from 0.11.0 to 0.11.4](https://github.com/RogerSelwyn/MS365-Teams/commit/2b84cdd94705960f9582e6abda3bf3b509f858f3) - @dependabot[bot]
+
+
+
+
 ## v1.4.3 (2025/03/14)
 ### 🐛 Fixes
 - [Fix issue with token refresh - pin MSAL to 1.13.1](https://github.com/RogerSelwyn/MS365-Teams/commit/5635ef3a891fb26002631cce9c8c1cb9280f8557) - @RogerSelwyn
