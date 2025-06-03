@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.6.5 (2025/06/03)
+### 🐛 Fixes
+- [Handle race condition for token update](https://github.com/RogerSelwyn/MS365-Teams/commit/65b971c310069b6b18bdc1bff4567aabd3004c36) - @RogerSelwyn
+
+### 📚 Documentation
+- [Correct Nabu Casa URL](https://github.com/RogerSelwyn/MS365-Teams/commit/298987339b7f3acbdcef3fe802b874542d48b6de) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.6.5](https://github.com/RogerSelwyn/MS365-Teams/commit/0684f4305ba0911f0761ac48440a2277f9614836) - @RogerSelwyn
+
+
+
+
 ## v1.4.4 (2025/05/18)
 ### 🐛 Fixes
 - [Handle 403 on get_messages from unauthorised tenant](https://github.com/RogerSelwyn/MS365-Teams/commit/e697b79b62cceeebc05f6e94f02bc294e1910ead) - @RogerSelwyn
