@@ -145,6 +145,10 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         data = []
         self._data[entity_key] = {}
         extra_attributes = {}
+
+        _LOGGER.debug("Refreshing MS365 token before chat update.")
+        await self.hass.async_add_executor_job(self._account.connection.refresh_token)
+        
         chats = await self.hass.async_add_executor_job(
             ft.partial(self._account.teams().get_my_chats, limit=20)
         )
