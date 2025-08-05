@@ -1,5 +1,28 @@
 # Changelog
 
+## v1.6.6 (2025/08/05)
+### 🐛 Fixes
+- [Fix deprecation warning](https://github.com/RogerSelwyn/MS365-Teams/commit/7163a5413d9da1e40bf4a13dc49ad7e21e40df91) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [Add oauthlib dependency](https://github.com/RogerSelwyn/MS365-Teams/commit/5da7ca75641d19707873bc39b5c116786e0ca7d4) - @RogerSelwyn
+- [Bump python-o365 to 2.1.5](https://github.com/RogerSelwyn/MS365-Teams/commit/10a28e3e397648f971fa1aa94d14ccd040a7a826) - @RogerSelwyn
+- [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/d6b4188f6b3a26a06d2d6ee4e3ce3edf9b9f3806) - @actions-user
+
+### ✅ Test
+- [Remove aiohttp-zlib-ng dependency](https://github.com/RogerSelwyn/MS365-Teams/commit/26c9263e74e19e12f6b765a2c6386904c18ef221) - @RogerSelwyn
+- [Update python to 3.13](https://github.com/RogerSelwyn/MS365-Teams/commit/3c65a4288c4c712d3203fe4e2dbcfcbb18283cb7) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.6.6](https://github.com/RogerSelwyn/MS365-Teams/commit/d5e08fb7bfde3b4b48c2bcdab5f7639fb9cdde4e) - @RogerSelwyn
+
+### Other
+- [build(deps): bump ruff from 0.11.4 to 0.12.2](https://github.com/RogerSelwyn/MS365-Teams/commit/d78138246684bd215842f131ddafe56b585ac01e) - @dependabot[bot]
+- [build(deps): bump ruff from 0.12.2 to 0.12.7](https://github.com/RogerSelwyn/MS365-Teams/commit/5e4f78ba08694af3b50640e4fe0e540120dbfbac) - @dependabot[bot]
+
+
+
+
 ## v1.6.5 (2025/06/03)
 ### 🐛 Fixes
 - [Handle race condition for token update](https://github.com/RogerSelwyn/MS365-Teams/commit/65b971c310069b6b18bdc1bff4567aabd3004c36) - @RogerSelwyn
