@@ -3,10 +3,10 @@
 ## v1.6.6 (2025/08/05)
 ### 🐛 Fixes
 - [Fix deprecation warning](https://github.com/RogerSelwyn/MS365-Teams/commit/7163a5413d9da1e40bf4a13dc49ad7e21e40df91) - @RogerSelwyn
+- [Fix token not refreshed before expiry causes 403 errors / unavailable sensors](https://github.com/RogerSelwyn/MS365-Teams/commit/10a28e3e397648f971fa1aa94d14ccd040a7a826) - @RogerSelwyn
 
 ### ⬆️ Dependencies
 - [Add oauthlib dependency](https://github.com/RogerSelwyn/MS365-Teams/commit/5da7ca75641d19707873bc39b5c116786e0ca7d4) - @RogerSelwyn
-- [Bump python-o365 to 2.1.5](https://github.com/RogerSelwyn/MS365-Teams/commit/10a28e3e397648f971fa1aa94d14ccd040a7a826) - @RogerSelwyn
 - [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/d6b4188f6b3a26a06d2d6ee4e3ce3edf9b9f3806) - @actions-user
 
 ### ✅ Test
@@ -15,11 +15,6 @@
 
 ### 🔖 Release
 - [Release v1.6.6](https://github.com/RogerSelwyn/MS365-Teams/commit/d5e08fb7bfde3b4b48c2bcdab5f7639fb9cdde4e) - @RogerSelwyn
-
-### Other
-- [build(deps): bump ruff from 0.11.4 to 0.12.2](https://github.com/RogerSelwyn/MS365-Teams/commit/d78138246684bd215842f131ddafe56b585ac01e) - @dependabot[bot]
-- [build(deps): bump ruff from 0.12.2 to 0.12.7](https://github.com/RogerSelwyn/MS365-Teams/commit/5e4f78ba08694af3b50640e4fe0e540120dbfbac) - @dependabot[bot]
-
 
 
 
