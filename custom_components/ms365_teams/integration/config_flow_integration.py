@@ -5,7 +5,7 @@ import voluptuous as vol
 from homeassistant import (
     config_entries,
 )
-from homeassistant.data_entry_flow import FlowResult
+from homeassistant.config_entries import ConfigFlowResult
 
 from ..classes.config_entry import MS365ConfigEntry
 from ..const import CONF_ENTITY_NAME
@@ -59,12 +59,12 @@ class MS365OptionsFlowHandler(config_entries.OptionsFlow):
     async def async_step_init(
         self,
         user_input=None,  # pylint: disable=unused-argument
-    ) -> FlowResult:
+    ) -> ConfigFlowResult:
         """Set up the option flow."""
 
         return await self.async_step_user()
 
-    async def async_step_user(self, user_input=None) -> FlowResult:
+    async def async_step_user(self, user_input=None) -> ConfigFlowResult:
         """Handle a flow initialized by the user."""
 
         if user_input:

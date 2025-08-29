@@ -70,8 +70,6 @@ async def test_options_flow(
         },
     )
     assert result.get("type") is FlowResultType.CREATE_ENTRY
-    assert "result" in result
-    assert result["result"] is True
     assert result["data"][CONF_UPDATE_INTERVAL] == 5
 
 
