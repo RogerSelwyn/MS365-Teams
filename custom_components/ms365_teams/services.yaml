@@ -1,7 +1,5 @@
 send_chat_message:
   target:
-    device:
-      integration: ms365_teams
     entity:
       integration: ms365_teams
       domain: sensor
@@ -30,8 +28,6 @@ send_chat_message:
 
 update_user_status:
   target:
-    device:
-      integration: ms365_teams
     entity:
       integration: ms365_teams
       domain: sensor
@@ -76,8 +72,6 @@ update_user_status:
 
 update_user_preferred_status:
   target:
-    device:
-      integration: ms365_teams
     entity:
       integration: ms365_teams
       domain: sensor
