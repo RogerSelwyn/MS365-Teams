@@ -1,5 +1,38 @@
 # Changelog
 
+## v1.10.0 (2026/02/03)
+### ✨ Enhancements
+- [add tenant_id support for single-tenant app registrations](https://github.com/RogerSelwyn/MS365-Teams/commit/ed9d4e9b71e497bacbafe5ab09544e0e6f565614) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Use ConfigFlowResult instead of FlowResult](https://github.com/RogerSelwyn/MS365-Teams/commit/ba67ce5a661bf84393031000073bd6a97854dc92) - @RogerSelwyn
+- [Remove device filter from target selector](https://github.com/RogerSelwyn/MS365-Teams/commit/6ff11397e7fd71cc3b64b0eaeda940e2e5a0701c) - @RogerSelwyn
+- [Tweaks for code improvement](https://github.com/RogerSelwyn/MS365-Teams/commit/1c323301de04fb7e95b7abb2de48a5d4695bc908) - @RogerSelwyn
+- [Updated JSON formatting](https://github.com/RogerSelwyn/MS365-Teams/commit/5b6430a2d2b395cb4f9f957696f50a53a541dd67) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [bump actions/checkout from 4 to 5](https://github.com/RogerSelwyn/MS365-Teams/commit/95fbd28a0e6bd18655bfabc8802fe8e95993be1b) - @dependabot[bot]
+- [bump actions/stale from 9 to 10](https://github.com/RogerSelwyn/MS365-Teams/commit/a77f60ffb2a635f11e6fbdbc43dab1423a09bd50) - @dependabot[bot]
+- [bump actions/setup-python from 5 to 6](https://github.com/RogerSelwyn/MS365-Teams/commit/1037c7918f30198941914686aa23455d696c978c) - @dependabot[bot]
+- [bump ruff from 0.12.7 to 0.13.0](https://github.com/RogerSelwyn/MS365-Teams/commit/d8eae8b16e965bedbd4022f70bd0883b246c070e) - @dependabot[bot]
+- [bump ruff from 0.13.0 to 0.13.1](https://github.com/RogerSelwyn/MS365-Teams/commit/cd80ead7aa12295c8efb250dd227d46c273ef533) - @dependabot[bot]
+- [bump github/codeql-action from 3 to 4](https://github.com/RogerSelwyn/MS365-Teams/commit/150ceb0d5904d56d80c40f0da922a77962b59e6d) - @dependabot[bot]
+- [bump ruff from 0.13.1 to 0.14.4](https://github.com/RogerSelwyn/MS365-Teams/commit/b12336292ddd597ef23428521530d8fbe042224d) - @dependabot[bot]
+- [bump actions/checkout from 5 to 6](https://github.com/RogerSelwyn/MS365-Teams/commit/a9c26388f16cad836238753a2b3e0130e5002982) - @dependabot[bot]
+
+### 📚 Documentation
+- [Update docs to point to generic docs](https://github.com/RogerSelwyn/MS365-Teams/commit/97fd6c95ec91d7ffb892b026826b866958dfae5f) - @RogerSelwyn
+- [Update README.md](https://github.com/RogerSelwyn/MS365-Teams/commit/1c657397c038618cf4c574254313a7cfbd959f6b) - @RogerSelwyn
+
+### ✅ Test
+- [Update test coverage handling](https://github.com/RogerSelwyn/MS365-Teams/commit/45068bcd967c7464862a63466e270b2da4c058b7) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.10.0](https://github.com/RogerSelwyn/MS365-Teams/commit/752cff935bdeb5059bb68c8d02f3c98752a83c91) - @RogerSelwyn
+
+
+
+
 ## v1.6.6 (2025/08/05)
 ### 🐛 Fixes
 - [Fix deprecation warning](https://github.com/RogerSelwyn/MS365-Teams/commit/7163a5413d9da1e40bf4a13dc49ad7e21e40df91) - @RogerSelwyn
