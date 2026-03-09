@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.10.1 (2026/03/09)
+### 🧰 Maintenance
+- [Add local brand logos](https://github.com/RogerSelwyn/MS365-Teams/commit/851efb537bd60bb229cb845749934f705a8180f8) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [bump ruff from 0.14.4 to 0.15.0](https://github.com/RogerSelwyn/MS365-Teams/commit/dcf247a64ccdd096305309fa9fe149c37898408d) - @dependabot[bot]
+- [bump ruff from 0.15.0 to 0.15.1](https://github.com/RogerSelwyn/MS365-Teams/commit/0db07d79b14dbc393ba26a7c6fe7a81af16d22fc) - @dependabot[bot]
+- [bump ruff from 0.15.1 to 0.15.4](https://github.com/RogerSelwyn/MS365-Teams/commit/16fc7cd184a751e5e99e37f56142722eb4167d41) - @dependabot[bot]
+
+### ✅ Test
+- [Fix tests for CN21V](https://github.com/RogerSelwyn/MS365-Teams/commit/03d0e9260ea09783f44f5b8bb210be86c1159546) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.10.1](https://github.com/RogerSelwyn/MS365-Teams/commit/6be657d8eccf478dea54e1f6cdcfb944e3532527) - @RogerSelwyn
+
+
+
+
 ## v1.10.0 (2026/02/03)
 ### ✨ Enhancements
 - [add tenant_id support for single-tenant app registrations](https://github.com/RogerSelwyn/MS365-Teams/commit/ed9d4e9b71e497bacbafe5ab09544e0e6f565614) - @RogerSelwyn
