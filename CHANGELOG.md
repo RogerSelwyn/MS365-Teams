@@ -1,5 +1,23 @@
 # Changelog
 
+## v1.11.0 (2026/04/24)
+### ✨ Enhancements
+- [Add support for MS365 GCC](https://github.com/RogerSelwyn/MS365-Teams/commit/4e25081330303fc20a34ce8d5eeb709739f6f972) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [update pygithub requirement from >=1.51 to >=2.9.1](https://github.com/RogerSelwyn/MS365-Teams/commit/86338bf1a4da725f4a7c6b9c5fe87c3ef6de9ad9) - @dependabot[bot]
+- [update pytest-homeassistant-custom-component requirement](https://github.com/RogerSelwyn/MS365-Teams/commit/4a742c839312d1d0e5193d6e77358c3a4eec9c5f) - @dependabot[bot]
+- [update portalocker requirement from >=3.1.1 to >=3.2.0](https://github.com/RogerSelwyn/MS365-Teams/commit/ebbba8ee6761b781e53a2615081db43e14bc4881) - @dependabot[bot]
+- [update beautifulsoup4 requirement from >=4.10.0 to >=4.14.3](https://github.com/RogerSelwyn/MS365-Teams/commit/d33e220557c180ff5e20754fb8150499758e5225) - @dependabot[bot]
+- [update o365 requirement from >=2.1.5 to >=2.1.9](https://github.com/RogerSelwyn/MS365-Teams/commit/a0856b90cfe295c36b4543d9f6ba92e3bcea0121) - @dependabot[bot]
+- [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/9b97c18dd89208254b36fe0fb810cac6de096f0d) - @actions-user
+
+### 🔖 Release
+- [Release v1.11.0](https://github.com/RogerSelwyn/MS365-Teams/commit/061889a34386eb5af76856be438608b9da3c7905) - @RogerSelwyn
+
+
+
+
 ## v1.10.1 (2026/03/09)
 ### 🧰 Maintenance
 - [Add local brand logos](https://github.com/RogerSelwyn/MS365-Teams/commit/851efb537bd60bb229cb845749934f705a8180f8) - @RogerSelwyn
