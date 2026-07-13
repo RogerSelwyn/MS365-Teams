@@ -1,5 +1,42 @@
 # Changelog
 
+## v1.11.1 (2026/07/13)
+### 🐛 Fixes
+- [Reinstate async_update_reload_and_abort to reload on reconfigure](https://github.com/RogerSelwyn/MS365-Teams/commit/c0976a19cc69149a3af1078d0377924654cf403e) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Updated to remove deprecation warning](https://github.com/RogerSelwyn/MS365-Teams/commit/508089aa0ff8ca1ea9e9b126211f05f547a67a13) - @RogerSelwyn
+- [Add integration diagnostics stub](https://github.com/RogerSelwyn/MS365-Teams/commit/739360089b47335e9c28c11a0b6cc099c2eeaed6) - @RogerSelwyn
+- [Break out update_requirements workflow](https://github.com/RogerSelwyn/MS365-Teams/commit/51d77ff4bf65b92a5f717435d944cba69b446def) - @RogerSelwyn
+- [Tidy up beautifulsoup](https://github.com/RogerSelwyn/MS365-Teams/commit/ebda9f0ddd14d46afcf422c44777d7b7c8f6da77) - @RogerSelwyn
+- [Remove wokflow run on PR](https://github.com/RogerSelwyn/MS365-Teams/commit/d706927887314c89f047cb9f9a5860a260463666) - @RogerSelwyn
+- [Update base to support extra platforms](https://github.com/RogerSelwyn/MS365-Teams/commit/472516a6f8c02cb2ffbebdf7b3ec660038ddafa2) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [update portalocker requirement from >=3.1.1 to >=3.2.0](https://github.com/RogerSelwyn/MS365-Teams/commit/b104b6e384b6a99a0d20851fbc626f265d971007) - @dependabot[bot]
+- [update o365 requirement from >=2.1.5 to >=2.1.9](https://github.com/RogerSelwyn/MS365-Teams/commit/ac63624cf93cb1fd1abda3c2766292cfe9158998) - @dependabot[bot]
+- [update beautifulsoup4 requirement from >=4.10.0 to >=4.14.3](https://github.com/RogerSelwyn/MS365-Teams/commit/6645919ba5b103c4ddedab0d62df1876218bd799) - @dependabot[bot]
+- [Bump portalocker to 3.2.0](https://github.com/RogerSelwyn/MS365-Teams/commit/23442d5ed6d95728fb4b632d4ac57282309d9f66) - @RogerSelwyn
+- [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/4ebaccdec921313c65391706eb6d5d9227e04b7e) - @actions-user
+- [bump actions/checkout from 6 to 7](https://github.com/RogerSelwyn/MS365-Teams/commit/6ac88bc50cc30210d632d539b4e316c948ad8545) - @dependabot[bot]
+- [Auto update requirements.txt](https://github.com/RogerSelwyn/MS365-Teams/commit/7d68be3229d2001eb14a16455550b694ee3a37f2) - @actions-user
+- [Add versioning strategy to Dependabot config](https://github.com/RogerSelwyn/MS365-Teams/commit/fff00d361a4d80ccc0ad819a7419213c28e73500) - @RogerSelwyn
+
+### 📚 Documentation
+- [Update countries available](https://github.com/RogerSelwyn/MS365-Teams/commit/24714b8132661eba0e3739b10c92960a9240f8e3) - @RogerSelwyn
+
+### ✅ Test
+- [Increase python version to HA default](https://github.com/RogerSelwyn/MS365-Teams/commit/15cb258c0d095fc9c4f7cecb301e628d8ca30e4b) - @RogerSelwyn
+- [Fix incorrect python version](https://github.com/RogerSelwyn/MS365-Teams/commit/32f68637fa00a4eff2d4c3ba54e1810ab4229994) - @RogerSelwyn
+- [Update workflows to UV](https://github.com/RogerSelwyn/MS365-Teams/commit/231e2964387cf9ffb99681355db8db652b76b0ff) - @RogerSelwyn
+- [Bump pytest-homeassistant-custom-component](https://github.com/RogerSelwyn/MS365-Teams/commit/e0c9cd04931ff1ce5159e8f468e4f25ec330b90a) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.11.1](https://github.com/RogerSelwyn/MS365-Teams/commit/b35d8a28074b1c00444ff3dd11aedb8cda1bd23a) - @RogerSelwyn
+
+
+
+
 ## v1.11.0 (2026/04/24)
 ### ✨ Enhancements
 - [Add support for MS365 GCC](https://github.com/RogerSelwyn/MS365-Teams/commit/4e25081330303fc20a34ce8d5eeb709739f6f972) - @RogerSelwyn
