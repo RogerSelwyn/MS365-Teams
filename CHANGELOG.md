@@ -103,7 +103,9 @@
 ### 🔖 Release
 - [Release v1.10.0](https://github.com/RogerSelwyn/MS365-Teams/commit/752cff935bdeb5059bb68c8d02f3c98752a83c91) - @RogerSelwyn
 
-
+## Past Changes
+<details>
+  <summary>Changes 2025</summary>
 
 
 ## v1.6.6 (2025/08/05)
@@ -280,6 +282,10 @@
 ### 🔖 Release
 - [Release v1.0.2](https://github.com/RogerSelwyn/MS365-Teams/commit/433b31b490a4b8cc3c4ebb2206223196d08119d5) - @RogerSelwyn
 
+</details>
+<details>
+  <summary>Changes 2024</summary>
+
 ## v1.0.1 (2024/11/30)
 ### 🧰 Maintenance
 - [Add support for migration from o365 integration](https://github.com/RogerSelwyn/MS365-Teams/commit/f01add8067b62fefd889733c5ba1d484691ebc0e) - @RogerSelwyn
@@ -376,3 +382,4 @@
 ## v0.0.1 (2024/07/12)
 Initial release
 
+</details>
