@@ -10,7 +10,7 @@ class MS365Mocks:
     """Standard mocks."""
 
     def cn21v_mocks(self, requests_mock, tenant_id="common"):
-        """Setup the standard mocks."""
+        """Create the standard mocks."""
         mock_call(requests_mock, CN21VURL.DISCOVERY, "discovery")
         # Mock the /common/ openid config with CN21V-specific URLs.
         # MSAL fetches this via the discovery response's tenant_discovery_endpoint.
@@ -27,7 +27,7 @@ class MS365Mocks:
         mock_call(requests_mock, CN21VURL.PRESENCE, "presence")
 
     def standard_mocks(self, requests_mock):
-        """Setup the standard mocks."""
+        """Create the standard mocks."""
         mock_call(requests_mock, URL.OPENID, "openid")
         mock_call(requests_mock, URL.ME, "me")
         mock_call(requests_mock, URL.CHATS, "chats")

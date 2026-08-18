@@ -1,14 +1,15 @@
 """Sensor processing."""
 
+from datetime import timedelta
 import functools as ft
 import logging
-from datetime import timedelta
+
+from requests.exceptions import HTTPError
 
 from homeassistant.config_entries import ConfigEntry
 from homeassistant.const import CONF_NAME, CONF_UNIQUE_ID
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers.update_coordinator import DataUpdateCoordinator
-from requests.exceptions import HTTPError
 
 from ..const import (
     ATTR_DATA,
@@ -46,7 +47,7 @@ _LOGGER = logging.getLogger(__name__)
 class MS365SensorCoordinator(DataUpdateCoordinator):
     """MS365 sensor data update coordinator."""
 
-    def __init__(self, hass: HomeAssistant, entry: ConfigEntry, account):
+    def __init__(self, hass: HomeAssistant, entry: ConfigEntry, account) -> None:
         """Initialize my coordinator."""
         update_interval = entry.options.get(
             CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL
@@ -161,7 +162,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
                     )
                 except HTTPError as err:
                     if err.response.status_code != 403:
-                        raise err
+                        raise
 
                 state, extra_attributes = self._process_chat_messages(messages)
 

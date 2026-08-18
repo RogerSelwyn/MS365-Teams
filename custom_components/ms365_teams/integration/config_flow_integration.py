@@ -1,11 +1,11 @@
 """Configuration flow for the MS365 platform."""
 
-import homeassistant.helpers.config_validation as cv
 import voluptuous as vol
-from homeassistant import (
-    config_entries,
-)
+
+from homeassistant import config_entries
 from homeassistant.config_entries import ConfigFlowResult
+from homeassistant.core import HomeAssistant
+import homeassistant.helpers.config_validation as cv
 
 from ..classes.config_entry import MS365ConfigEntry
 from ..const import CONF_ENTITY_NAME
@@ -45,7 +45,7 @@ def integration_validate_schema(user_input):
     return {}
 
 
-async def async_integration_imports(hass, import_data):  # pylint: disable=unused-argument
+async def async_integration_imports(hass: HomeAssistant, import_data):  # pylint: disable=unused-argument
     """Do the integration  level import tasks."""
     return
 
@@ -53,7 +53,7 @@ async def async_integration_imports(hass, import_data):  # pylint: disable=unuse
 class MS365OptionsFlowHandler(config_entries.OptionsFlow):
     """Config flow options for MS365."""
 
-    def __init__(self, entry: MS365ConfigEntry):
+    def __init__(self, entry: MS365ConfigEntry) -> None:
         """Initialize MS365 options flow."""
 
     async def async_step_init(

@@ -146,7 +146,7 @@ class MS365TeamsSensor(MS365Entity):
 
     def __init__(
         self, coordinator, entry: MS365ConfigEntry, name, entity_id, unique_id
-    ):
+    ) -> None:
         """Initialise the Teams Sensor."""
         super().__init__(coordinator, entry, name, entity_id, unique_id)
         self.teams = self._entry.runtime_data.ha_account.account.teams()
@@ -169,7 +169,7 @@ class MS365TeamsStatusSensor(MS365TeamsSensor, SensorEntity):
         entity_id,
         unique_id,
         email,
-    ):
+    ) -> None:
         """Initialise the Teams Sensor."""
         super().__init__(coordinator, entry, name, entity_id, unique_id)
         self._email = email

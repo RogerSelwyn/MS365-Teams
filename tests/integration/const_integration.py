@@ -63,7 +63,7 @@ FULL_INIT_ENTITY_NO = 2
 
 
 class URL(Enum):
-    """List of URLs"""
+    """List of URLs."""
 
     OPENID = (
         "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration"
@@ -80,7 +80,7 @@ class URL(Enum):
 
 
 class CN21VURL(Enum):
-    """List of URLs"""
+    """List of URLs."""
 
     DISCOVERY = "https://login.microsoftonline.com/common/discovery/instance"
     OPENID = "https://login.partner.microsoftonline.cn/common/v2.0/.well-known/openid-configuration"

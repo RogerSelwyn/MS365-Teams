@@ -40,7 +40,7 @@ async def test_chat_services(
     setup_base_integration,
     caplog: pytest.LogCaptureFixture,
 ) -> None:
-    """Test chat services"""
+    """Test chat services."""
     entity_name = "sensor.test_chat"
     with patch("O365.teams.Chat.send_message") as mock_send_message:
         await hass.services.async_call(
@@ -84,7 +84,7 @@ async def test_presence_services(
     hass: HomeAssistant,
     setup_base_integration,
 ) -> None:
-    """Test presence services"""
+    """Test presence services."""
     entity_name = "sensor.test_status"
     with patch("O365.teams.Teams.set_my_presence") as mock_set_presence:
         await hass.services.async_call(
@@ -138,7 +138,7 @@ async def test_presence_service_failures(
     hass: HomeAssistant,
     setup_base_integration,
 ) -> None:
-    """Testchat services"""
+    """Test chat services."""
     entity_name = "sensor.test_status"
     with pytest.raises(ServiceValidationError) as exc_info:
         await hass.services.async_call(
@@ -224,7 +224,7 @@ async def test_presence_failed_permission(
     hass: HomeAssistant,
     setup_base_integration,
 ) -> None:
-    """Testchat services"""
+    """Test chat services."""
     entity_name = "sensor.test_status"
     failed_perm = "teams.failed_perm"
     with (
