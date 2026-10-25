@@ -5,15 +5,8 @@ from copy import deepcopy
 from enum import Enum
 
 from custom_components.ms365_teams.config_flow import MS365ConfigFlow  # noqa: F401
-from custom_components.ms365_teams.const import (  # noqa: F401
-    AUTH_CALLBACK_PATH_ALT,
-    COUNTRY_URLS,
-    OAUTH_REDIRECT_URL,
-    CountryOptions,
-)
-from custom_components.ms365_teams.integration.const_integration import (
-    DOMAIN,  # noqa: F401
-)
+from custom_components.ms365_teams.const import AUTH_CALLBACK_PATH_ALT, COUNTRY_URLS, OAUTH_REDIRECT_URL, CountryOptions  # noqa: F401
+from custom_components.ms365_teams.integration.const_integration import DOMAIN  # noqa: F401
 
 from ..const import CLIENT_ID, CLIENT_SECRET, ENTITY_NAME
 
@@ -65,9 +58,7 @@ FULL_INIT_ENTITY_NO = 2
 class URL(Enum):
     """List of URLs."""
 
-    OPENID = (
-        "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration"
-    )
+    OPENID = "https://login.microsoftonline.com/common/v2.0/.well-known/openid-configuration"
     ME = "https://graph.microsoft.com/v1.0/me"
     CHATS = "https://graph.microsoft.com/v1.0/me/chats"
     CHAT1_MESSAGES = "https://graph.microsoft.com/v1.0//chats/chat1/messages"
@@ -86,7 +77,5 @@ class CN21VURL(Enum):
     OPENID = "https://login.partner.microsoftonline.cn/common/v2.0/.well-known/openid-configuration"
     ME = "https://microsoftgraph.chinacloudapi.cn/v1.0/me"
     CHATS = "https://microsoftgraph.chinacloudapi.cn/v1.0/me/chats"
-    CHAT1_MESSAGES = (
-        "https://microsoftgraph.chinacloudapi.cn/v1.0//chats/chat1/messages"
-    )
+    CHAT1_MESSAGES = "https://microsoftgraph.chinacloudapi.cn/v1.0//chats/chat1/messages"
     PRESENCE = "https://microsoftgraph.chinacloudapi.cn/v1.0/me/presence"

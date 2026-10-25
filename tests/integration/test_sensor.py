@@ -1,13 +1,14 @@
 # pylint: disable=unused-argument,line-too-long,wrong-import-order
 """Test main sensors testing."""
 
-from unittest.mock import patch, Mock
+from unittest.mock import Mock, patch
 
 import pytest
 from requests.exceptions import HTTPError
+from requests_mock import Mocker
+
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import entity_registry as er
-from requests_mock import Mocker
 
 from ..helpers.mock_config_entry import MS365MockConfigEntry
 from ..helpers.utils import check_entity_state, mock_call  # , utcnow
@@ -23,9 +24,7 @@ async def test_get_data(
     entity_registry: er.EntityRegistry,
 ) -> None:
     """Test get data."""
-    entities = er.async_entries_for_config_entry(
-        entity_registry, base_config_entry.entry_id
-    )
+    entities = er.async_entries_for_config_entry(entity_registry, base_config_entry.entry_id)
     assert len(entities) == 2
 
     check_entity_state(
@@ -102,9 +101,7 @@ async def test_get_update_chat_systemevent(
     [{"chat_enable": "Disabled", "alternate_email": "jane@nomail.com"}],
     indirect=True,
 )
-@pytest.mark.parametrize(
-    "base_token", ["Presence.Read Presence.Read.All User.ReadBasic.All"], indirect=True
-)
+@pytest.mark.parametrize("base_token", ["Presence.Read Presence.Read.All User.ReadBasic.All"], indirect=True)
 async def test_get_other_user_status(
     hass: HomeAssistant,
     setup_base_integration,
@@ -122,13 +119,12 @@ async def test_run_update(
 ) -> None:
     """Test running coordinator update."""
     coordinator = base_config_entry.runtime_data.coordinator
-    with patch(
-        "homeassistant.helpers.entity.Entity.async_write_ha_state"
-    ) as mock_async_write_ha_state:
+    with patch("homeassistant.helpers.entity.Entity.async_write_ha_state") as mock_async_write_ha_state:
         await coordinator.async_refresh()
     await hass.async_block_till_done()
 
     assert mock_async_write_ha_state.called
+
 
 async def test_httperror_403(
     hass: HomeAssistant,
@@ -140,9 +136,7 @@ async def test_httperror_403(
     coordinator = base_config_entry.runtime_data.coordinator
     mock_resp = Mock()
     mock_resp.status_code = 403
-    with patch(
-        "O365.teams.Chat.get_messages", side_effect=HTTPError(response=mock_resp)
-    ):
+    with patch("O365.teams.Chat.get_messages", side_effect=HTTPError(response=mock_resp)):
         await coordinator.async_refresh()
     await hass.async_block_till_done()
 
@@ -169,9 +163,7 @@ async def test_httperror_not_403(
     coordinator = base_config_entry.runtime_data.coordinator
     mock_resp = Mock()
     mock_resp.status_code = 404
-    with patch(
-        "O365.teams.Chat.get_messages", side_effect=HTTPError(response=mock_resp)
-    ):
+    with patch("O365.teams.Chat.get_messages", side_effect=HTTPError(response=mock_resp)):
         await coordinator.async_refresh()
     await hass.async_block_till_done()
     assert "Error requesting MS365 Teams data" in caplog.text

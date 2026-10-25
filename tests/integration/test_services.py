@@ -4,13 +4,10 @@
 from unittest.mock import patch
 
 import pytest
+
+from custom_components.ms365_teams.integration.const_integration import CONF_CHAT_ENABLE, CONF_STATUS_ENABLE
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ServiceValidationError
-
-from custom_components.ms365_teams.integration.const_integration import (
-    CONF_CHAT_ENABLE,
-    CONF_STATUS_ENABLE,
-)
 
 from ..conftest import MS365MockConfigEntry
 from .const_integration import DOMAIN
@@ -154,9 +151,7 @@ async def test_presence_service_failures(
             return_response=False,
         )
     await hass.async_block_till_done()
-    assert "Not possible to update alternate user status: jane@nomail.com" in str(
-        exc_info.value
-    )
+    assert "Not possible to update alternate user status: jane@nomail.com" in str(exc_info.value)
 
     with pytest.raises(ServiceValidationError) as exc_info:
         await hass.services.async_call(
@@ -171,9 +166,7 @@ async def test_presence_service_failures(
             return_response=False,
         )
     await hass.async_block_till_done()
-    assert "Not possible to update alternate user status: jane@nomail.com" in str(
-        exc_info.value
-    )
+    assert "Not possible to update alternate user status: jane@nomail.com" in str(exc_info.value)
 
 
 @pytest.mark.parametrize(
@@ -208,10 +201,7 @@ async def test_chat_failed_permission(
             blocking=True,
             return_response=False,
         )
-    assert (
-        f"Not authorised to send message - requires permission: {failed_perm}"
-        in str(exc_info.value)
-    )
+    assert f"Not authorised to send message - requires permission: {failed_perm}" in str(exc_info.value)
 
 
 @pytest.mark.parametrize(
@@ -247,10 +237,7 @@ async def test_presence_failed_permission(
             return_response=False,
         )
     await hass.async_block_till_done()
-    assert (
-        f"Not authorised to update status - requires permission: {failed_perm}"
-        in str(exc_info.value)
-    )
+    assert f"Not authorised to update status - requires permission: {failed_perm}" in str(exc_info.value)
 
     with (
         patch(
@@ -271,7 +258,4 @@ async def test_presence_failed_permission(
             return_response=False,
         )
     await hass.async_block_till_done()
-    assert (
-        f"Not authorised to update status - requires permission: {failed_perm}"
-        in str(exc_info.value)
-    )
+    assert f"Not authorised to update status - requires permission: {failed_perm}" in str(exc_info.value)

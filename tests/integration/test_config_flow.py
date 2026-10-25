@@ -1,14 +1,12 @@
 # pylint: disable=line-too-long, unused-argument
 """Test the config flow."""
 
+from requests_mock import Mocker
+
+from custom_components.ms365_teams.integration.const_integration import CONF_UPDATE_INTERVAL
 from homeassistant import config_entries
 from homeassistant.core import HomeAssistant
 from homeassistant.data_entry_flow import FlowResultType
-from requests_mock import Mocker
-
-from custom_components.ms365_teams.integration.const_integration import (
-    CONF_UPDATE_INTERVAL,
-)
 
 from ..const import CLIENT_ID, CLIENT_SECRET, ENTITY_NAME
 from ..helpers.mock_config_entry import MS365MockConfigEntry
@@ -25,9 +23,7 @@ async def test_invalid_config(
     mock_token(requests_mock, BASE_TOKEN_PERMS)
     MS365MOCKS.standard_mocks(requests_mock)
 
-    result = await hass.config_entries.flow.async_init(
-        DOMAIN, context={"source": config_entries.SOURCE_USER}
-    )
+    result = await hass.config_entries.flow.async_init(DOMAIN, context={"source": config_entries.SOURCE_USER})
     result = await hass.config_entries.flow.async_configure(
         result["flow_id"],
         user_input={

@@ -4,9 +4,10 @@
 from unittest.mock import patch
 
 import pytest
+from requests_mock import Mocker
+
 from homeassistant.core import HomeAssistant
 from homeassistant.helpers import entity_registry as er
-from requests_mock import Mocker
 
 from ..helpers.mock_config_entry import MS365MockConfigEntry
 from ..helpers.utils import build_token_file
@@ -40,9 +41,7 @@ async def test_read_all_permissions(
 ) -> None:
     """Test base permissions."""
     assert "Presence.Read.All" in base_config_entry.runtime_data.permissions.permissions
-    assert (
-        "User.ReadBasic.All" in base_config_entry.runtime_data.permissions.permissions
-    )
+    assert "User.ReadBasic.All" in base_config_entry.runtime_data.permissions.permissions
 
 
 async def test_update_permissions(
@@ -52,9 +51,7 @@ async def test_update_permissions(
 ) -> None:
     """Test update permissions."""
     assert "Chat.ReadWrite" in base_config_entry.runtime_data.permissions.permissions
-    assert (
-        "Presence.ReadWrite" in base_config_entry.runtime_data.permissions.permissions
-    )
+    assert "Presence.ReadWrite" in base_config_entry.runtime_data.permissions.permissions
 
 
 async def test_missing_permissions(
@@ -67,9 +64,7 @@ async def test_missing_permissions(
     build_token_file(tmp_path, "")
 
     base_config_entry.add_to_hass(hass)
-    with patch(
-        "homeassistant.helpers.issue_registry.async_create_issue"
-    ) as mock_async_create_issue:
+    with patch("homeassistant.helpers.issue_registry.async_create_issue") as mock_async_create_issue:
         await hass.config_entries.async_setup(base_config_entry.entry_id)
 
     assert "Minimum required permissions: 'Chat.Read, Presence.Read'" in caplog.text
@@ -92,21 +87,14 @@ async def test_read_all_missing_permissions(
     build_token_file(tmp_path, "Chat.Read Presence.Read")
 
     base_config_entry.add_to_hass(hass)
-    with patch(
-        "homeassistant.helpers.issue_registry.async_create_issue"
-    ) as mock_async_create_issue:
+    with patch("homeassistant.helpers.issue_registry.async_create_issue") as mock_async_create_issue:
         await hass.config_entries.async_setup(base_config_entry.entry_id)
 
-    assert (
-        "Minimum required permissions: 'Presence.Read.All, User.ReadBasic.All'"
-        in caplog.text
-    )
+    assert "Minimum required permissions: 'Presence.Read.All, User.ReadBasic.All'" in caplog.text
     assert mock_async_create_issue.called
 
 
-@pytest.mark.parametrize(
-    "base_token", ["Chat.ReadWrite Presence.ReadWrite"], indirect=True
-)
+@pytest.mark.parametrize("base_token", ["Chat.ReadWrite Presence.ReadWrite"], indirect=True)
 async def test_higher_permissions(
     hass: HomeAssistant,
     requests_mock: Mocker,
@@ -120,7 +108,5 @@ async def test_higher_permissions(
     await hass.config_entries.async_setup(base_config_entry.entry_id)
     await hass.async_block_till_done()
 
-    entities = er.async_entries_for_config_entry(
-        entity_registry, base_config_entry.entry_id
-    )
+    entities = er.async_entries_for_config_entry(entity_registry, base_config_entry.entry_id)
     assert len(entities) == 2
