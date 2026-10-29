@@ -1,5 +1,44 @@
 # Changelog
 
+## v1.13.0 (2026/10/29)
+### 🐛 Fixes
+- [Show reconfigure succesful transalation](https://github.com/RogerSelwyn/MS365-Teams/commit/7a2f821b78030737a80fad07f45755f2836ccbb2) - @RogerSelwyn
+- [Apply fixes from calendar base changes](https://github.com/RogerSelwyn/MS365-Teams/commit/509cc4d9592e757ec2ecc7fcf0dee0ed941f08ef) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Remove double reload after config change](https://github.com/RogerSelwyn/MS365-Teams/commit/9ed13ada48f3682cb323fdfd4db4c57af9a5b26f) - @RogerSelwyn
+- [Update to HA Ruff standards](https://github.com/RogerSelwyn/MS365-Teams/commit/30fc019ebbf5d57a0c43601b6eb7d0d0fd4b830e) - @RogerSelwyn
+- [Remove deprecated attribute](https://github.com/RogerSelwyn/MS365-Teams/commit/1ec94735eaa1f2808b3f1c78bae3be1f100eddd5) - @RogerSelwyn
+
+### ⬆️ Dependencies
+- [bump actions/setup-python from 6 to 7](https://github.com/RogerSelwyn/MS365-Teams/commit/f6319b12c8215775be550d1236eb9152f8a2b984) - @dependabot[bot]
+- [bump github/codeql-action from 4 to 4.37.4](https://github.com/RogerSelwyn/MS365-Teams/commit/c3e6742997810f67c0c5f8f0e493949f075476ae) - @dependabot[bot]
+- [bump actions/stale from 10 to 11](https://github.com/RogerSelwyn/MS365-Teams/commit/04b385e5e428a6aa654e5f944d601899a6471fef) - @dependabot[bot]
+- [bump astral-sh/setup-uv from 8.1.0 to 10.0.1](https://github.com/RogerSelwyn/MS365-Teams/commit/3cc9c07035e5b13356cc50ba3fb1efd274696533) - @dependabot[bot]
+- [bump ruff from 0.15.4 to 0.16.3](https://github.com/RogerSelwyn/MS365-Teams/commit/3bb72649e77b0cd1047e6069a650ea614aebc80a) - @dependabot[bot]
+- [update pytest-homeassistant-custom-component requirement](https://github.com/RogerSelwyn/MS365-Teams/commit/59ee9af62ab87c00453b9595190c653a96e280a2) - @dependabot[bot]
+- [bump github/codeql-action from 4.37.4 to 4.38.2](https://github.com/RogerSelwyn/MS365-Teams/commit/2c12211590da998b7e9e237f71a0671d208d4f94) - @dependabot[bot]
+- [bump astral-sh/setup-uv from 10.0.1 to 10.2.0](https://github.com/RogerSelwyn/MS365-Teams/commit/4684418670b4e59bf35042c3b50697d0ce3f8832) - @dependabot[bot]
+- [bump ruff from 0.16.3 to 0.16.9](https://github.com/RogerSelwyn/MS365-Teams/commit/0e199d1c8d39041535ecd4698ba738d3be99ef71) - @dependabot[bot]
+- [update pygithub requirement from >=2.9.1 to >=2.10.0](https://github.com/RogerSelwyn/MS365-Teams/commit/958ae01ce7fa2befaf8b6b337a56e12c8c2b0269) - @dependabot[bot]
+- [bump astral-sh/setup-uv from 10.2.0 to 10.3.2](https://github.com/RogerSelwyn/MS365-Teams/commit/2c0f3ca508646bf8f791823fca0e225470cec5f6) - @dependabot[bot]
+- [bump ruff from 0.16.9 to 0.17.2](https://github.com/RogerSelwyn/MS365-Teams/commit/0d2acb55bec3a5918c6ace1f6ac05ee578d19829) - @dependabot[bot]
+- [bump github/codeql-action from 4.38.2 to 4.39.1](https://github.com/RogerSelwyn/MS365-Teams/commit/6871496609d6fa463c4c80bdf7e362c4c38dd334) - @dependabot[bot]
+- [update pytest-homeassistant-custom-component requirement](https://github.com/RogerSelwyn/MS365-Teams/commit/18298fc125ac4022822296ff0dafb62c708a1561) - @dependabot[bot]
+- [Bump HA core to 2025.6.0](https://github.com/RogerSelwyn/MS365-Teams/commit/c7682080bf74c075e7504cc15b431dde54ba725a) - @RogerSelwyn
+
+### 📚 Documentation
+- [Tidy up changelog](https://github.com/RogerSelwyn/MS365-Teams/commit/e98e7c42fe48859ddc576708d2380650461a6360) - @RogerSelwyn
+
+### ✅ Test
+- [Format tests with Ruff](https://github.com/RogerSelwyn/MS365-Teams/commit/651f1826387622250a8449ba9f5678d8615bf531) - @RogerSelwyn
+
+### 🔖 Release
+- [Release v1.13.0](https://github.com/RogerSelwyn/MS365-Teams/commit/4814a12c3b0fa392af2a2bc6ed05fab92b1e09c8) - @RogerSelwyn
+
+
+
+
 ## v1.11.1 (2026/07/13)
 ### 🐛 Fixes
 - [Reinstate async_update_reload_and_abort to reload on reconfigure](https://github.com/RogerSelwyn/MS365-Teams/commit/c0976a19cc69149a3af1078d0377924654cf403e) - @RogerSelwyn
