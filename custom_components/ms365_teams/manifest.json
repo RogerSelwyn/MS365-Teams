@@ -1,6 +1,10 @@
 {
   "domain": "ms365_teams",
   "name": "Microsoft 365 - Teams",
+  "categories": [
+    "messaging_notifications.chat_apps",
+    "productivity_information"
+  ],
   "codeowners": ["@RogerSelwyn"],
   "config_flow": true,
   "dependencies": ["http"],
