@@ -1,5 +1,25 @@
 # Changelog
 
+## v1.14.0 (2026/11/05)
+### ✨ Enhancements
+- [Add External Secret support](https://github.com/RogerSelwyn/MS365-Teams/commit/dd718bd4080457476d4cb957250fb2a9a85cbb98) - @RogerSelwyn
+
+### 🧰 Maintenance
+- [Add categories and bump HA core to 2026.11.0](https://github.com/RogerSelwyn/MS365-Teams/commit/e2ca2ef101dbae24847de7e3d2fc91455462fc76) - @RogerSelwyn
+- [Remove redundant delete_issues](https://github.com/RogerSelwyn/MS365-Teams/commit/727552a8ba2a1e9607de51542f5cfc21c0d505a4) - @RogerSelwyn
+- [Config entry methods now return None](https://github.com/RogerSelwyn/MS365-Teams/commit/091a6f9a4f2c1c09660a80e1b4b6aff248eecee7) - @RogerSelwyn
+- [Config entry unload methods should return None](https://github.com/RogerSelwyn/MS365-Teams/commit/f2923aceec37f9b11665e738b3658f25cdbd355d) - @RogerSelwyn
+- [Config entry unload methods should return None](https://github.com/RogerSelwyn/MS365-Teams/commit/0f07c4f28e97d47808c6dd32ab38301898ee930b) - @RogerSelwyn
+
+### ✅ Test
+- [Migrate to pytest_homeassistant](https://github.com/RogerSelwyn/MS365-Teams/commit/6cb30e7bd5ed8043150b84bfcc277d5217383ceb) - @RogerSelwyn
+- [Update testing for completeness](https://github.com/RogerSelwyn/MS365-Teams/commit/5a30bf1a86db5ffaf7ce6f29feeb5d410d37e663) - @RogerSelwyn
+- [Correct test exclusions](https://github.com/RogerSelwyn/MS365-Teams/commit/59e84eea7c3cabc0052907a5a20f9f74e86050f7) - @RogerSelwyn
+- [Add environment secret default to tests](https://github.com/RogerSelwyn/MS365-Teams/commit/fb60476f03a2b3a2c21c2fb346b120aced64393c) - @RogerSelwyn
+
+
+
+
 ## v1.13.0 (2026/10/29)
 ### 🐛 Fixes
 - [Show reconfigure succesful transalation](https://github.com/RogerSelwyn/MS365-Teams/commit/7a2f821b78030737a80fad07f45755f2836ccbb2) - @RogerSelwyn
