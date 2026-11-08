@@ -4,7 +4,6 @@ import voluptuous as vol
 
 from homeassistant import config_entries
 from homeassistant.config_entries import ConfigFlowResult
-from homeassistant.core import HomeAssistant
 import homeassistant.helpers.config_validation as cv
 
 from ..classes.config_entry import MS365ConfigEntry
@@ -17,6 +16,9 @@ from .const_integration import (
     DEFAULT_UPDATE_INTERVAL,
     EnableOptions,
 )
+
+INTEGRATION_CONFIG_VERSION = 2
+INRTEGRATION_CONFIG_MINOR_VERSION = 0
 
 
 def integration_reconfigure_schema(entry_data):
@@ -43,11 +45,6 @@ def integration_validate_schema(user_input):
     ):
         return {CONF_STATUS_ENABLE: "status_enable_should_be_read"}
     return {}
-
-
-async def async_integration_imports(hass: HomeAssistant, import_data):  # pylint: disable=unused-argument
-    """Do the integration  level import tasks."""
-    return
 
 
 class MS365OptionsFlowHandler(config_entries.OptionsFlow):

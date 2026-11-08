@@ -18,10 +18,6 @@ UPDATE_TOKEN_PERMS = "Chat.ReadWrite Presence.ReadWrite"
 UPDATE_OPTIONS = {"chat_enable": "Update", "status_enable": "Update"}
 
 
-MIGRATION_CONFIG_ENTRY = {
-    "options": {},
-}
-
 DIAGNOSTIC_GRANTED_PERMISSIONS = [
     "Chat.Read",
     "Presence.Read",
