@@ -1,6 +1,6 @@
 """Configuration flow for the MS365 platform."""
 
-import voluptuous as vol
+import probatio
 
 from homeassistant import config_entries
 from homeassistant.config_entries import ConfigFlowResult
@@ -24,13 +24,13 @@ INRTEGRATION_CONFIG_MINOR_VERSION = 0
 def integration_reconfigure_schema(entry_data):
     """Extend the schema with integration specific attributes."""
     return {
-        vol.Required(CONF_CHAT_ENABLE, default=entry_data[CONF_CHAT_ENABLE]): vol.In(
-            EnableOptions
-        ),
-        vol.Required(
+        probatio.Required(
+            CONF_CHAT_ENABLE, default=entry_data[CONF_CHAT_ENABLE]
+        ): probatio.In(EnableOptions),
+        probatio.Required(
             CONF_STATUS_ENABLE, default=entry_data[CONF_STATUS_ENABLE]
-        ): vol.In(EnableOptions),
-        vol.Optional(
+        ): probatio.In(EnableOptions),
+        probatio.Optional(
             CONF_ALTERNATE_EMAIL,
             description={"suggested_value": entry_data.get(CONF_ALTERNATE_EMAIL)},
         ): cv.string,
@@ -74,14 +74,16 @@ class MS365OptionsFlowHandler(config_entries.OptionsFlow):
             description_placeholders={
                 CONF_ENTITY_NAME: self.config_entry.data[CONF_ENTITY_NAME]
             },
-            data_schema=vol.Schema(
+            data_schema=probatio.Schema(
                 {
-                    vol.Required(
+                    probatio.Required(
                         CONF_UPDATE_INTERVAL,
                         default=self.config_entry.options.get(
                             CONF_UPDATE_INTERVAL, DEFAULT_UPDATE_INTERVAL
                         ),
-                    ): vol.All(vol.Coerce(int), vol.Range(min=1, max=60)),
+                    ): probatio.All(
+                        probatio.Coerce(int), probatio.Range(min=1, max=60)
+                    ),
                 }
             ),
             errors=errors,
