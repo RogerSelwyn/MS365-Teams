@@ -62,7 +62,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
             update_interval=timedelta(seconds=update_interval),
         )
         self._entry = entry
-        self._account = account
+        self.account = account
         self._entity_name = entry.data[CONF_ENTITY_NAME]
         self.keys = []
         self._data = {}
@@ -89,7 +89,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
 
             if email := self._entry.data.get(CONF_ALTERNATE_EMAIL):
                 email_account = await self.hass.async_add_executor_job(
-                    self._account.directory().get_user,
+                    self.account.directory().get_user,
                     email,
                 )
                 new_key[CONF_EMAIL_ACCOUNT] = email_account.object_id
@@ -132,12 +132,12 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         email_account = key.get(CONF_EMAIL_ACCOUNT)
         if not email_account:
             if data := await self.hass.async_add_executor_job(
-                self._account.teams().get_my_presence
+                self.account.teams().get_my_presence
             ):
                 self._data[entity_key] = {ATTR_STATE: data.activity}
             return
         if data := await self.hass.async_add_executor_job(
-            self._account.teams().get_user_presence, email_account
+            self.account.teams().get_user_presence, email_account
         ):
             self._data[entity_key] = {ATTR_STATE: data.activity}
 
@@ -148,7 +148,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         self._data[entity_key] = {}
         extra_attributes = {}
         chats = await self.hass.async_add_executor_job(
-            ft.partial(self._account.teams().get_my_chats, limit=20)
+            ft.partial(self.account.teams().get_my_chats, limit=20)
         )
         for chat in chats:
             if chat.chat_type == "unknownFutureValue":
