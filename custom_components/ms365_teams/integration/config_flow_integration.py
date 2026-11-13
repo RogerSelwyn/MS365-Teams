@@ -18,7 +18,7 @@ from .const_integration import (
 )
 
 INTEGRATION_CONFIG_VERSION = 2
-INRTEGRATION_CONFIG_MINOR_VERSION = 0
+INTEGRATION_CONFIG_MINOR_VERSION = 0
 
 
 def integration_reconfigure_schema(entry_data):

@@ -32,8 +32,6 @@ CONTENT_TYPES = ["text", "html"]
 
 DEFAULT_UPDATE_INTERVAL = 30
 
-ENTITY_ID_FORMAT_SENSOR = "sensor.{}"
-
 EVENT_SEND_CHAT_MESSAGE = "send_chat_message"
 EVENT_UPDATE_USER_STATUS = "update_user_status"
 EVENT_UPDATE_USER_PREFERRED_STATUS = "update_user_preferred_status"

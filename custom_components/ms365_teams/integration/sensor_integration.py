@@ -4,15 +4,12 @@ import functools as ft
 import logging
 
 from homeassistant.components.sensor import SensorEntity
-from homeassistant.const import ATTR_NAME, CONF_EMAIL, CONF_NAME, CONF_UNIQUE_ID
+from homeassistant.const import ATTR_NAME, CONF_NAME, CONF_UNIQUE_ID
 from homeassistant.core import HomeAssistant
 from homeassistant.exceptions import ServiceValidationError
 from homeassistant.helpers import entity_platform
 from homeassistant.helpers.entity_platform import AddEntitiesCallback
-from O365.teams import (  # pylint: disable=import-error, no-name-in-module
-    PreferredActivity,
-    PreferredAvailability,
-)
+from O365.teams import PreferredActivity, PreferredAvailability  # pylint: disable=import-error, no-name-in-module
 
 from ..classes.config_entry import MS365ConfigEntry
 from ..classes.entity import MS365Entity
@@ -145,10 +142,10 @@ class MS365TeamsSensor(MS365Entity):
     _attr_translation_key = "teams"
 
     def __init__(
-        self, coordinator, entry: MS365ConfigEntry, name, entity_id, unique_id
+        self, coordinator, entry: MS365ConfigEntry, name, entity_key, unique_id
     ) -> None:
         """Initialise the Teams Sensor."""
-        super().__init__(coordinator, entry, name, entity_id, unique_id)
+        super().__init__(coordinator, entry, name, entity_key, unique_id)
         self.teams = self._entry.runtime_data.ha_account.account.teams()
         self._application_id = entry.data[CONF_CLIENT_ID]
 
@@ -166,12 +163,12 @@ class MS365TeamsStatusSensor(MS365TeamsSensor, SensorEntity):
         coordinator,
         entry: MS365ConfigEntry,
         name,
-        entity_id,
+        entity_key,
         unique_id,
         email,
     ) -> None:
         """Initialise the Teams Sensor."""
-        super().__init__(coordinator, entry, name, entity_id, unique_id)
+        super().__init__(coordinator, entry, name, entity_key, unique_id)
         self._email = email
 
     async def async_update_user_status(
@@ -183,7 +180,7 @@ class MS365TeamsStatusSensor(MS365TeamsSensor, SensorEntity):
                 translation_domain=DOMAIN,
                 translation_key="not_possible",
                 translation_placeholders={
-                    CONF_EMAIL: self._email,
+                    "email": self._email,
                 },
             )
 
@@ -211,7 +208,7 @@ class MS365TeamsStatusSensor(MS365TeamsSensor, SensorEntity):
                 translation_domain=DOMAIN,
                 translation_key="not_possible",
                 translation_placeholders={
-                    CONF_EMAIL: self._email,
+                    "email": self._email,
                 },
             )
 

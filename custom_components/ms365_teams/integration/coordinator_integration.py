@@ -18,7 +18,6 @@ from ..const import (
     CONF_ENTITY_NAME,
     CONF_ENTITY_TYPE,
 )
-from ..helpers.utils import build_entity_id
 from .const_integration import (
     ATTR_CHAT_ID,
     ATTR_CHAT_TYPE,
@@ -35,7 +34,6 @@ from .const_integration import (
     CONF_STATUS_ENABLE,
     CONF_UPDATE_INTERVAL,
     DEFAULT_UPDATE_INTERVAL,
-    ENTITY_ID_FORMAT_SENSOR,
     SENSOR_TEAMS_CHAT,
     SENSOR_TEAMS_STATUS,
     EnableOptions,
@@ -79,9 +77,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         if self._entry.data[CONF_STATUS_ENABLE] != EnableOptions.DISABLED:
             name = f"{self._entry.data[CONF_ENTITY_NAME]}_status"
             new_key = {
-                CONF_ENTITY_KEY: build_entity_id(
-                    self.hass, ENTITY_ID_FORMAT_SENSOR, name
-                ),
+                CONF_ENTITY_KEY: name,
                 CONF_UNIQUE_ID: f"{name}_ms365",
                 CONF_NAME: name,
                 CONF_ENTITY_TYPE: SENSOR_TEAMS_STATUS,
@@ -101,9 +97,7 @@ class MS365SensorCoordinator(DataUpdateCoordinator):
         if self._entry.data[CONF_CHAT_ENABLE] != EnableOptions.DISABLED:
             name = f"{self._entry.data[CONF_ENTITY_NAME]}_chat"
             new_key = {
-                CONF_ENTITY_KEY: build_entity_id(
-                    self.hass, ENTITY_ID_FORMAT_SENSOR, name
-                ),
+                CONF_ENTITY_KEY: name,
                 CONF_UNIQUE_ID: f"{name}_ms365",
                 CONF_NAME: name,
                 CONF_ENTITY_TYPE: SENSOR_TEAMS_CHAT,
